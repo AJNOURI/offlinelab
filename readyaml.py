@@ -7,9 +7,7 @@ __email__ = 'ajn.bin@gmail.com'
 #!/usr/bin/env python
 import yaml
 import pexpect
-import multiprocessing
 import logging
-<<<<<<< HEAD
 from xml.dom.minidom import Document
 import time
 
@@ -18,9 +16,6 @@ TODO:
 Ignore lines beginning with # commands ==> looks like enabled by default for yaml files ??
 """
 
-
-=======
->>>>>>> 7825f37e92cdde131510e145f29d0b933be00426
 
 logger = logging.getLogger(__name__)
 
@@ -31,11 +26,7 @@ if arg1 == '-v':
 elif arg1 == '-vv':
     logging.basicConfig(level=logging.DEBUG)
 
-<<<<<<< HEAD
 handler = logging.FileHandler('initconfig.log', mode='w')
-=======
-handler = logging.FileHandler('initconfig.log')
->>>>>>> 7825f37e92cdde131510e145f29d0b933be00426
 # Create logging format and bind to root logging object
 formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 # Create file handler
@@ -44,7 +35,7 @@ logger.addHandler(handler)
 
 
 class Connect(object):
-<<<<<<< HEAD
+
     def __init__(self, ip=" ", hostname=" ", login="admin", passwd="cisco", \
                  cmdlist=[], ci=1, flog=False, \
                  telnetport="23", sshport="22", \
@@ -65,26 +56,10 @@ class Connect(object):
 
 
     def telnet(self):
-        try:
-            self.child = pexpect.spawn('telnet', ['-l', self.login, self.ip, self.telnetport], self.tout)
-=======
-    def __init__(self, host=" ", cmdlist=[], login="admin",\
-                 passwd="cisco", telnetport="23", sshport="22", tout=30):
-        self.cmdlist = cmdlist
-        self.host = host
-        self.tout = tout
-        self.telnetport = telnetport
-        self.sshport = sshport
-        self.login = login
-        self.passwd = passwd
-        print self.login, self.passwd
-
-
-    def telnet(self):
         ######################### TELNET
         try:
             self.child = pexpect.spawn('telnet', ['-l', self.login, self.host, self.telnetport], self.tout)
->>>>>>> 7825f37e92cdde131510e145f29d0b933be00426
+
             self.child.setecho(False) # Turn off tty echo
             index = self.child.expect(['.*sername.*'])
             self.child.sendline(self.login)
@@ -98,7 +73,6 @@ class Connect(object):
             self.child.expect(['.*#.*'])
         except pexpect.ExceptionPexpect, e:
             print e.value
-<<<<<<< HEAD
         logger.info('Successful authentication to host ' + self.ip)
 
 
@@ -323,73 +297,3 @@ f.close()
 # *** XML ***
 
 logger.info('XML report built successfully')
-
-
-=======
-
-
-        logger.info('Successful authentication to host ' + self.host)
-
-    def sendCmds(self):
-
-        ######################## execute cmd
-        for cmd in self.cmdlist:
-            self.child.sendline(cmd)
-            logger.debug('sending command ' + cmd + ' to ' + self.host + '...')
-            self.child.expect(['.*#.*'])
-            logger.debug(self.host + ': ' + cmd + ' done...')
-
-        logger.debug('')
-        logger.debug('All commands for host ' + self.host + ' Successfully executed')
-
-        ######################## variabe part: end
-
-        #filename = "shape" + ".txt"
-        #fout = file(filename, 'w')
-        #child.logfile = fout
-
-        # Exit from int config mode to global (maybe not needed)
-        #############
-        self.child.sendline('exit')
-        self.child.expect(['.*#.*'])
-        self.child.sendline('exit')
-        self.child.expect(['.*#.*'])
-
-        # Logout from the router from user mode
-        self.child.sendline('do logout')
-        self.child.sendline('logout')
-        self.child.expect(pexpect.EOF)
-        self.child.close()
-
-    def close(self):
-        # Logout from the router in case something gone wrong
-        self.child.sendline('do logout')
-        self.child.sendline('logout')
-        self.child.expect(pexpect.EOF)
-        self.child.close()
-
-def case(casefile):
-
-    stream = open(casefile)
-    rdata = yaml.load(stream)
-
-    for key, value in rdata.iteritems():
-        cmdlist = []
-        #print key.strip('\r\n')
-        hostname = key.strip('\r\n')
-        #print value
-        print 'ip: ', value[0]['ip']
-        host = value[0]['ip']
-        print 'sleep: ', value[1]['sleep']
-        sleep = value[1]['sleep']
-        for cmd in value[2:len(value)+1]:
-            #print cmd
-            cmdlist.append(cmd)
-        #print cmdlist
-        conn = Connect(host, cmdlist)
-        conn.telnet()
-        conn.sendCmds()
-
-case("case1.yaml")
->>>>>>> 7825f37e92cdde131510e145f29d0b933be00426
-
