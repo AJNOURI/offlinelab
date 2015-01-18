@@ -1,0 +1,43 @@
+# YAML
+R6:
+  - ip: 192.168.1.206
+  - login: admin
+  - password: cisco
+  - sleep:  0
+  - sh ip ospf neighbor
+  - sh ip ospf int
+  - sh ip ospf data
+  - sh ip ospf data router
+  - sh ip ospf data summary
+  - sh ip route 10.10.0.1
+  - sh ip route 20.10.0.2
+  - sh ip route 20.20.0.2
+  - sh ip route 30.10.0.3
+  - sh ip route 30.20.0.3
+  - sh ip route 40.10.0.4
+  - sh ip route 50.10.0.5
+  - sh ip route 50.20.0.5
+  - sh ip route
+  - sh ip route summary
+  - sh ip route connected
+  - sh ip route static
+  - sh ip cef
+  - sh ip cef adjacency
+  - sh ip protocol
+  - sh ip vrf
+  - sh ip vrf interfaces
+  - sh ip vrf detail
+  - sh ip cef
+  - sh route-map
+  - sh run
+  - sh adjacency
+  - sh adjacency detail
+  - sh controllers
+  - sh fla  - sh
+  - sh buffers
+  - sh memory free
+  - sh memory statistics
+  - sh memory failures alloc
+  - sh process cpu
+  - sh stacks
+  - sh cdp neighbors

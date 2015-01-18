@@ -1,0 +1,11 @@
+# YAML
+R3:
+  - ip: 192.168.1.203
+  - login: admin
+  - password: cisco
+  - sleep:  0
+  - sh ip route 20.10.0.2
+  - sh ip route 20.20.0.2
+  - ping 20.10.0.2
+  - ping 20.20.0.2
+  - trace 20.10.0.2 source 30.10.0.3

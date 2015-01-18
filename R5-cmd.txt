@@ -1,0 +1,10 @@
+# YAML
+R5:
+  - ip: 192.168.1.205
+  - login: admin
+  - password: cisco
+  - sleep:  0
+  - sh ip ospf database summary 10.10.0.1
+  - sh ip route 10.10.0.1
+  - ping 10.10.0.1
+  - trace 10.10.0.1 source 50.10.0.5
