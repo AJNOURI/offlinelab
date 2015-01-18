@@ -7,6 +7,7 @@ __email__ = 'ajn.bin@gmail.com'
 #!/usr/bin/env python
 import yaml
 import pexpect
+import multiprocessing
 import logging
 from xml.dom.minidom import Document
 import time
@@ -15,6 +16,7 @@ import time
 TODO:
 Ignore lines beginning with # commands ==> looks like enabled by default for yaml files ??
 """
+
 
 
 logger = logging.getLogger(__name__)
@@ -35,7 +37,6 @@ logger.addHandler(handler)
 
 
 class Connect(object):
-
     def __init__(self, ip=" ", hostname=" ", login="admin", passwd="cisco", \
                  cmdlist=[], ci=1, flog=False, \
                  telnetport="23", sshport="22", \
@@ -56,10 +57,8 @@ class Connect(object):
 
 
     def telnet(self):
-        ######################### TELNET
         try:
-            self.child = pexpect.spawn('telnet', ['-l', self.login, self.host, self.telnetport], self.tout)
-
+            self.child = pexpect.spawn('telnet', ['-l', self.login, self.ip, self.telnetport], self.tout)
             self.child.setecho(False) # Turn off tty echo
             index = self.child.expect(['.*sername.*'])
             self.child.sendline(self.login)
