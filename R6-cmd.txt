@@ -33,7 +33,6 @@ R6:
   - sh adjacency
   - sh adjacency detail
   - sh controllers
-  - sh fla  - sh
   - sh buffers
   - sh memory free
   - sh memory statistics

@@ -3,7 +3,7 @@ R1:
   - ip: 192.168.1.201
   - login: admin
   - password: cisco
-  - sleep:  10
+  - sleep:  0
   - conf t
   - interface fa1/0
   - ip ospf cost 10
@@ -13,5 +13,5 @@ R2:
   - password: cisco
   - sleep:  10
   - conf t
-  - interface fa1/2
+  - interface fa1/1
   - ip ospf cost 10

@@ -9,3 +9,32 @@ R3:
   - ping 20.10.0.2
   - ping 20.20.0.2
   - trace 20.10.0.2 source 30.10.0.3
+  - sh ip ospf neighbor
+  - sh ip ospf int
+  - sh ip ospf data
+  - sh ip ospf data router
+  - sh ip ospf data summary
+  - sh ip route
+  - sh ip route summary
+  - sh ip route connected
+  - sh ip route static
+  - sh ip cef
+  - sh ip cef adjacency
+  - sh ip protocol
+  - sh ip vrf
+  - sh ip vrf interfaces
+  - sh ip vrf detail
+  - sh ip cef
+  - sh route-map
+  - sh run
+  - sh adjacency
+  - sh adjacency detail
+  - sh controllers
+  - sh fla  - sh
+  - sh buffers
+  - sh memory free
+  - sh memory statistics
+  - sh memory failures alloc
+  - sh process cpu
+  - sh stacks
+  - sh cdp neighbors
