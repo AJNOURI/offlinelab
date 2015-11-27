@@ -1,7 +1,0 @@
-2015-01-18 13:58:29,983 - __main__ - INFO -  **** Initialization started... ****
-2015-01-18 13:58:29,998 - __main__ - DEBUG - [{'ip': '192.168.1.204'}, {'login': 'admin'}, {'password': 'cisco'}, {'sleep': 10}, 'conf t', 'interface fa1/1', 'ip ospf cost 1', 'no sh', 'interface fa1/2', 'ip ospf cost 1', 'no sh', 'interface fa1/0', 'ip ospf cost 1', 'no sh']
-2015-01-18 13:58:29,998 - __main__ - DEBUG - ip: 192.168.1.204
-2015-01-18 13:58:29,998 - __main__ - DEBUG - login: admin
-2015-01-18 13:58:29,998 - __main__ - DEBUG - password: cisco
-2015-01-18 13:58:29,998 - __main__ - DEBUG - sleep: 10
-2015-01-18 13:58:30,275 - __main__ - INFO - Successful authentication to host 192.168.1.204
