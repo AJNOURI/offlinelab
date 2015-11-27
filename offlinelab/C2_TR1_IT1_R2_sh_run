@@ -1,0 +1,241 @@
+
+Building configuration...
+
+Current configuration : 4799 bytes
+!
+version 15.2
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+!
+hostname IOU2
+!
+boot-start-marker
+boot-end-marker
+!
+!
+logging buffered 1000000
+!
+aaa new-model
+!
+!
+aaa authentication login default local
+!
+!
+!
+!
+!
+aaa session-id common
+!
+clock timezone CET 1 0
+mmi polling-interval 60
+no mmi auto-configure
+no mmi pvc
+mmi snmp-timeout 180
+no ip icmp rate-limit unreachable
+ip auth-proxy max-login-attempts 5
+ip admission max-login-attempts 5
+!
+!
+!
+!
+!
+no ip domain lookup
+ip domain name cciethebeginning.wordpress.com
+ip cef
+no ipv6 cef
+!
+multilink bundle-name authenticated
+!
+!
+!
+!
+!
+!
+!
+crypto pki trustpoint TP-self-signed-5
+ enrollment selfsigned
+ subject-name cn=IOS-Self-Signed-Certificate-5
+ revocation-check none
+ rsakeypair TP-self-signed-5
+!
+!
+crypto pki certificate chain TP-self-signed-5
+ certificate self-signed 01
+  30820219 30820182 A0030201 02020101 300D0609 2A864886 F70D0101 05050030 
+  28312630 24060355 0403131D 494F532D 53656C66 2D536967 6E65642D 43657274 
+  69666963 6174652D 35301E17 0D313531 31323631 30303432 335A170D 32303031 
+  30313030 30303030 5A302831 26302406 03550403 131D494F 532D5365 6C662D53 
+  69676E65 642D4365 72746966 69636174 652D3530 819F300D 06092A86 4886F70D 
+  01010105 0003818D 00308189 02818100 ED62C914 615D8F32 FD64697D 65F0D912 
+  28978345 A72D9780 45BEED3C DB06BEA4 773FCA44 FBD13263 33A77EBB 9418A65F 
+  E8C1BBA9 415E6EE9 96B115CE 6879823F B0A61269 2259E0F3 BD8DFE3A 596D4E74 
+  D0FF68EA 2BBFB814 21559C6E DCB06A65 4A7BE8C0 3A92A4AC F3EB5C80 BC21F9DD 
+  6EF5AACB 05359279 82B86553 467E973D 02030100 01A35330 51300F06 03551D13 
+  0101FF04 05300301 01FF301F 0603551D 23041830 16801445 2AB5F088 DD15183D 
+  F8A4CB71 296545F2 68B3F530 1D060355 1D0E0416 0414452A B5F088DD 15183DF8 
+  A4CB7129 6545F268 B3F5300D 06092A86 4886F70D 01010505 00038181 00242738 
+  97C12023 22540DA6 C399AFC0 D0E1FC28 27FA1AB5 1A28715B 65936E71 D141BA48 
+  B3F069F2 08FBA929 793735AB ABCE73B7 BD2F54BC 8E9E7162 AA4C2A94 4FA0024A 
+  2F4FE73D A507E592 3F916D1B FEA7199B 79D6257B C771EE47 0F34C14D 94311F4B 
+  C4E19CFB 53218F65 4C9B99B4 F294B0E7 CBFD12D7 0E29FC9D DF2343C8 E3
+  	quit
+username admin privilege 15 password 0 cisco
+!
+redundancy
+!
+!
+ip tcp synwait-time 5
+ip ssh rsa keypair-name IOU2.cciethebeginning.wordpress.com
+ip ssh version 2
+! 
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+interface Loopback0
+ ip address 2.2.2.2 255.255.255.255
+!
+interface Ethernet0/0
+ ip address 192.168.12.2 255.255.255.0
+ ip ospf 1234 area 0
+!
+interface Ethernet0/1
+ ip address 192.168.23.2 255.255.255.0
+ ip ospf 1234 area 0
+!
+interface Ethernet0/2
+ no ip address
+ shutdown
+!
+interface Ethernet0/3
+ no ip address
+ shutdown
+!
+interface Ethernet1/0
+ no ip address
+ shutdown
+!
+interface Ethernet1/1
+ no ip address
+ shutdown
+!
+interface Ethernet1/2
+ no ip address
+ shutdown
+!
+interface Ethernet1/3
+ ip address 192.168.0.202 255.255.255.0
+!
+interface Serial2/0
+ no ip address
+ shutdown
+ serial restart-delay 0
+!
+interface Serial2/1
+ no ip address
+ shutdown
+ serial restart-delay 0
+!
+interface Serial2/2
+ no ip address
+ shutdown
+ serial restart-delay 0
+!
+interface Serial2/3
+ no ip address
+ shutdown
+ serial restart-delay 0
+!
+interface Serial3/0
+ no ip address
+ shutdown
+ serial restart-delay 0
+!
+interface Serial3/1
+ no ip address
+ shutdown
+ serial restart-delay 0
+!
+interface Serial3/2
+ no ip address
+ shutdown
+ serial restart-delay 0
+!
+interface Serial3/3
+ no ip address
+ shutdown
+ serial restart-delay 0
+!
+router ospf 1234
+ router-id 2.2.2.2
+!
+ip forward-protocol nd
+!
+!
+ip http server
+ip http authentication local
+ip http secure-server
+!
+!
+!
+!
+!
+!
+control-plane
+!
+!
+!
+!
+!
+!
+alias exec p6 ping
+alias exec se sh running-config | section
+alias exec sr sh running-config
+alias exec cc copy run start
+alias exec ii sh ip int brief
+alias exec sia sh ip alias
+alias exec iiu sh ip int brief | ex unassigned
+alias exec intcf sh run interface
+alias exec acl sh ip access-list
+alias exec acl6 sh ipv6 access-list
+alias exec croute clear ip route
+alias exec ii6 sh ipv6 int brief
+alias exec route6 sh ipv6 route
+alias exec route4 sh ip route | beg Gate
+alias exec trace6 trace ipv6
+alias exec bgp4 sh ip bgp
+alias exec bgpcf sh run | b router bgp
+alias exec bgpn sh ip bgp summ
+alias exec ospfcf sh run | b router ospf
+alias exec ospfn sh ip ospf nei
+alias exec cospf clear ip ospf pro
+alias exec eigrpcf sh run | b router eigrp
+alias exec eigrpn sh ip eigrp nei
+alias exec ripcf sh run | b router rip
+alias exec cpu show proc cpu | exclu 0.00%__0.00%__0.00%
+alias exec maincpu | include ^CPU|IP Input
+alias exec mem show proc memory
+!
+line con 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+line aux 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+line vty 0 4
+ exec-timeout 0 0
+ privilege level 15
+ transport input telnet ssh
+!
+!
+end

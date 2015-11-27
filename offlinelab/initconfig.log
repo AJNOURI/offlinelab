@@ -1,0 +1,19 @@
+2015-11-27 23:14:48,654 - __main__ - INFO - main -  **** Test run 1 started **** 
+2015-11-27 23:14:48,655 - __main__ - INFO - main -  **** Case 1 collecting device states **** 
+2015-11-27 23:14:48,658 - __main__ - ERROR - main - file IOU1-cmd.txt NOT found
+2015-11-27 23:14:51,456 - __main__ - ERROR - main - file IOU5-cmd.txt NOT found
+2015-11-27 23:14:51,456 - __main__ - INFO - main -  **** Test run 1 COMPLETED SUCCESSFULLY **** 
+2015-11-27 23:14:51,456 - __main__ - INFO - main -  **** Case 1 collecting device states COMPLETED SUCCESSFULLY **** 
+2015-11-27 23:14:51,456 - __main__ - INFO - main -  **** Test run 1 started **** 
+2015-11-27 23:14:51,456 - __main__ - INFO - main -  **** Case 2 collecting device states **** 
+2015-11-27 23:14:51,460 - __main__ - ERROR - main - file IOU1-cmd.txt NOT found
+2015-11-27 23:14:54,321 - __main__ - ERROR - main - file IOU5-cmd.txt NOT found
+2015-11-27 23:14:54,322 - __main__ - INFO - main -  **** Test run 1 COMPLETED SUCCESSFULLY **** 
+2015-11-27 23:14:54,322 - __main__ - INFO - main -  **** Case 2 collecting device states COMPLETED SUCCESSFULLY **** 
+2015-11-27 23:14:54,322 - __main__ - INFO - main -  **** Test run 1 started **** 
+2015-11-27 23:14:54,322 - __main__ - INFO - main -  **** Case 3 collecting device states **** 
+2015-11-27 23:14:54,325 - __main__ - ERROR - main - file IOU1-cmd.txt NOT found
+2015-11-27 23:14:57,098 - __main__ - ERROR - main - file IOU5-cmd.txt NOT found
+2015-11-27 23:14:57,098 - __main__ - INFO - main -  **** Test run 1 COMPLETED SUCCESSFULLY **** 
+2015-11-27 23:14:57,098 - __main__ - INFO - main -  **** Case 3 collecting device states COMPLETED SUCCESSFULLY **** 
+2015-11-27 23:14:57,101 - __main__ - INFO - main - XML report built successfully

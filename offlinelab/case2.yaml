@@ -1,0 +1,9 @@
+# YAML
+R3:
+  - ip: 192.168.0.203
+  - login: admin
+  - password: cisco
+  - sleep:  0
+  - conf t
+  - interface e0/0
+  - sh
