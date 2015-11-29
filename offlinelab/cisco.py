@@ -17,11 +17,12 @@ class connect(object):
 
         try:
             stream = open(cmdfile)
-            rdata = yaml.load(stream)
+            self.rdata = yaml.load(stream)
             logging.debug('\n\n\n### Reading CMD list from YAML file: ' + cmdfile)
-            if rdata:
-                for key, value in rdata.iteritems():
-                    self.cmdlist = []
+            self.cmdlist = []
+            if self.rdata:
+                for key, value in self.rdata.iteritems():
+                    
                     #print key.strip('\r\n')
                     self.hostname = key.strip('\r\n')
                     #logging.debug(value)
@@ -43,67 +44,67 @@ class connect(object):
                         #print cmd
                         self.cmdlist.append(cmd)
             else:
-                    logging.DEBUG('File %s is empty', cmdfile)
+                    logging.debug('File ',cmdfile,' is empty')
         except IOError:
-            logger.Error('File %s NOT found', cmdfile)
+            logger.error('File ',cmdfile,' NOT found')
 
 
     def paraSsh(self):
+        if self.rdata:
+            MAXBYTES = 999999
+            outlist = []
 
-        MAXBYTES = 999999
-        outlist = []
+            sshobj = paramiko.SSHClient()
+            sshobj.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+            sshobj.connect(self.ip, username=self.login, password=self.passwd)
+            sshobj.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+            channel = sshobj.invoke_shell()
 
-        sshobj = paramiko.SSHClient()
-        sshobj.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-        sshobj.connect(self.ip, username=self.login, password=self.passwd)
-        sshobj.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-        channel = sshobj.invoke_shell()
-
-        channel.send('en\n')
-        time.sleep(1)
-        resp = channel.recv(MAXBYTES)
-        #print ('en :', resp)
-
-        if self.enpasswd:
-            # enablepassword!
-            channel.send(self.enpasswd + '\n')
+            channel.send('en\n')
             time.sleep(1)
             resp = channel.recv(MAXBYTES)
-            #print ('enable password :', resp)
+            #print ('en :', resp)
+
+            if self.enpasswd:
+                # enablepassword!
+                channel.send(self.enpasswd + '\n')
+                time.sleep(1)
+                resp = channel.recv(MAXBYTES)
+                #print ('enable password :', resp)
 
 
-        channel.send('terminal length 0\n')
-        time.sleep(1)
-
-        for cmdi in self.cmdlist:
-            # first we enable!
-            channel.send(cmdi + '\n')
+            channel.send('terminal length 0\n')
             time.sleep(1)
-            cmdoutput = channel.recv(MAXBYTES)
-            #print cmdoutput
 
-            if self.flog:
-                precommand = cmdi.replace(':', '_')
-                precommand = precommand.replace('.', '_')
-                precommand = precommand.replace('/', '_')
-                filename = 'C' + str(self.ci) + '_TR' + str(self.testrun) + '_IT'\
-                        + str(self.iteration) + '_' + self.hostname + '_' + precommand
-                filename = filename.replace(' ', '_')
+            for cmdi in self.cmdlist:
+                # first we enable!
+                channel.send(cmdi + '\n')
+                time.sleep(1)
+                cmdoutput = channel.recv(MAXBYTES)
+                #print cmdoutput
 
-                with open(filename, 'w') as file_out:
-                    file_out.write(cmdoutput)
-                file_out.close()
-                print 'paraSsh: ', cmdi, ' DONE',' Output File ==> ', filename
-                outlist.append({filename:cmdi})
+                if self.flog:
+                    precommand = cmdi.replace(':', '_')
+                    precommand = precommand.replace('.', '_')
+                    precommand = precommand.replace('/', '_')
+                    filename = 'C' + str(self.ci) + '_TR' + str(self.testrun) + '_IT'\
+                            + str(self.iteration) + '_' + self.hostname + '_' + precommand
+                    filename = filename.replace(' ', '_')
 
-            #logging.DEBUG(cmdi, ': Sent successfully')
+                    with open(filename, 'w') as file_out:
+                        file_out.write(cmdoutput)
+                    file_out.close()
+                    print 'paraSsh: ', cmdi, ' DONE',' Output File ==> ', filename
+                    outlist.append({filename:cmdi})
+
+                #logging.DEBUG(cmdi, ': Sent successfully')
 
 
-        channel.send('do no terminal pager 0\n')
-        time.sleep(1)
+            channel.send('do no terminal pager 0\n')
+            time.sleep(1)
 
-        sshobj.close()
-        time.sleep(self.sleep)
+            sshobj.close()
+            time.sleep(self.sleep)
 
-        return outlist
+            return outlist
 

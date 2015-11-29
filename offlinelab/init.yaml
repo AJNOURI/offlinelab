@@ -1,16 +1,17 @@
 # YAML
-R3:
+IOU3:
   - ip: 192.168.0.203
   - login: admin
   - password: cisco
+  - enablepassword: cisco  
   - sleep:  0
   - conf t
   - interface e0/0
-  - no sh
-R4:
+IOU4:
   - ip: 192.168.0.204
   - login: admin
   - password: cisco
+  - enablepassword: cisco  
   - sleep:  0
   - conf t
   - interface e0/0

@@ -45,8 +45,8 @@ def main():
     #arg3 = ''
     arg4 = '-x'
     #arg4 = ''
-    #arg5 = '-s'
-    arg5 = ''
+    arg5 = '-s'
+    #arg5 = ''
     if arg3 == '-c':
         filelog = True
     else:
@@ -93,13 +93,18 @@ def main():
             # Initialize device prior to each test caselist
             #
             logger.info(' **** Initialization started... ****')
-            cisco.remoteDev("init.yaml", flg=False)
+            stream = open('init.yaml')
+            rdata = yaml.load(stream)
+            #print rdata
+            conn = cisco.connect('1', 'init.yaml', False)
+            conn.paraSsh()
             logger.info(' **** Initialization COMPLETED ****')
 
             # Apply state conditions for each test case
             #
             logger.info(' **** Applying Case ' + str(casei+1) + ' conditions **** ')
-            cisco.remoteDev(casefile, flg=False)
+            conn = cisco.connect('1', casefile, False)
+            conn.paraSsh()
             logger.info(' **** Case ' + str(casei+1) + ' conditions APPLIED SUCCESSFULLY **** ')
 
         if arg3 == '-c':    # collecting file
