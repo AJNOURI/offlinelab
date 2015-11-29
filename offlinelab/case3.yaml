@@ -3,7 +3,8 @@ R4:
   - ip: 192.168.0.204
   - login: admin
   - password: cisco
-  - sleep:  0
+  - enablepassword: cisco
+  - sleep: 10
   - conf t
   - interface e0/0
   - sh

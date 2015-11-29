@@ -2,7 +2,6 @@
 
 import yaml
 import pexpect
-import multiprocessing
 import logging
 from xml.dom.minidom import Document
 import time
@@ -64,11 +63,11 @@ def main():
         # *** XML ***
 
     collectfilelist = [
-        "IOU1-cmd.txt",
-        "IOU2-cmd.txt",
-        "IOU3-cmd.txt",
-        "IOU4-cmd.txt",
-        "IOU5-cmd.txt"
+        "IOU1-cmd.yaml",
+        "IOU2-cmd.yaml",
+        "IOU3-cmd.yaml",
+        "IOU4-cmd.yaml",
+        "IOU5-cmd.yaml"
         ]
 
     caselist = [
@@ -151,16 +150,23 @@ def main():
 
                         for key, value in rdata.iteritems():
                             cmdlist = []
+
                             hostname = key.strip('\r\n')
                             logger.debug('hostname: ' + hostname)
                             logger.debug('ip: ' + value[0]['ip'])
                             ip = value[0]['ip']
+                            
                             logger.debug('login: ' + value[1]['login'])
                             login = value[1]['login']
+                            
                             logger.debug('password: ' + value[2]['password'])
                             password = value[2]['password']
-                            logger.debug('sleep: ' + str(value[3]['sleep']))
-                            sleep = value[3]['sleep']
+                            
+                            logger.debug('enablepassword: ' + str(value[3]['enablepassword']))
+                            enablepassword = value[3]['enablepassword']                            
+                            
+                            logger.debug('sleep: ' + str(value[4]['sleep']))
+                            sleep = value[4]['sleep']
 
                             if arg4 == '-x':
                                 # *** XML ***
@@ -170,42 +176,38 @@ def main():
                                 testrun.appendChild(router)
                                 # *** XML ***
 
-                            for cmd in value[4:len(value)+1]:
-                                cmdlist = []
-                                cmdlist.append(cmd)
-                                conn = cisco.Connect(ip, hostname, login, password, cmdlist, ci=casei+1, flog=filelog, tout=300)
-                                # para_ssh: a single command
-                                rcmdfile = conn.paraSsh()
+                            conn = cisco.connect(str(casei+1), collectfile, filelog, str(trun), str(iterations), sleep, tout=300)
+                            # paraSsh returns a list of dictionaries [{filename:command}...]
+                            rcmdfile = conn.paraSsh()
+                            logger.debug('result of conn.paraSsh(): %s', rcmdfile)
 
-
-                                logger.debug('File:  %s', rcmdfile)
-                                logger.debug('Command: = %s', cmd)
-
-                                if arg4 == '-x':
-                                    # *** XML ***
-                                    # Create a command node tag
-                                    command = doc.createElement("command")
-                                    router.appendChild(command)
-                                    # Create a cmdname node tag
-                                    cmdname = doc.createElement("cmdname")
-                                    command.appendChild(cmdname)
-                                    # Give the cmdname node tag text
-                                    cmdnametext = doc.createTextNode(cmd)
-                                    cmdname.appendChild(cmdnametext)
-                                    # Create a cmdfile element
-                                    cmdfile = doc.createElement("cmdfile")
-                                    command.appendChild(cmdfile)
-                                    # Give the cmdfile elemenet text
-                                    # filename returned from cisco_telnet
-                                    cmdfiletext = doc.createTextNode(rcmdfile)
-                                    cmdfile.appendChild(cmdfiletext)
-                                # *** XML ***
+                            if arg4 == '-x':
+                                for itm in rcmdfile:
+                                    for kfile, vcmd in itm.iteritems():
+                                        # *** XML ***
+                                        # Create a command node tag
+                                        command = doc.createElement("command")
+                                        router.appendChild(command)
+                                        # Create a cmdname node tag
+                                        cmdname = doc.createElement("cmdname")
+                                        command.appendChild(cmdname)
+                                        # Give the cmdname node tag text
+                                        cmdnametext = doc.createTextNode(vcmd)
+                                        cmdname.appendChild(cmdnametext)
+                                        # Create a cmdfile element
+                                        cmdfile = doc.createElement("cmdfile")
+                                        command.appendChild(cmdfile)
+                                        # Give the cmdfile elemenet text
+                                        # filename returned from cisco_telnet
+                                        cmdfiletext = doc.createTextNode(kfile)
+                                        cmdfile.appendChild(cmdfiletext)
+                                        # *** XML ***
 
                     except IOError:
                         logger.error('file %s NOT found', collectfile)
 
-            logger.info(' **** Test run ' + str(trun) + ' COMPLETED SUCCESSFULLY **** ')
-        logger.info(' **** Case ' + str(casei+1) + ' collecting device states COMPLETED SUCCESSFULLY **** ')
+            logger.info(' **** Test run ' + str(trun) + ' COMPLETED SUCCESSFULLY ****\n\n ')
+        logger.info(' **** Case ' + str(casei+1) + ' collecting device states COMPLETED SUCCESSFULLY ****\n\n\n ')
 
     if arg4 == '-x':
         # *** XML ***

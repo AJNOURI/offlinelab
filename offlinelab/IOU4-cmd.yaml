@@ -1,0 +1,10 @@
+# YAML
+R4:
+  - ip: 192.168.0.204
+  - login: admin
+  - password: cisco
+  - enablepassword: cisco 
+  - sleep:  0
+  - sh run
+  - sh ip route
+  - sh ip int brief
