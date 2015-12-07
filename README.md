@@ -11,3 +11,4 @@ For now it supports Cisco IOS/IOU and *nix systems, more to come.
 
 Here is an example: ![OSPF topology offline lab](http://hpnouri.free.fr/ospfalle2/offlinelabv1.swf)
 
+![screenshot](http://hpnouri.free.fr/Selection_360.jpg)
