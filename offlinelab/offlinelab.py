@@ -10,7 +10,7 @@ import cisco
 
 __author__ = 'AJ NOURI'
 __date__ = '26/11/2015'
-__license__ = 'MIT'
+__license__ = 'GPLv2'
 __version__ = '0.1'
 __email__ = 'ajn.bin@gmail.com'
 
