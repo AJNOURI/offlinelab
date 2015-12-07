@@ -1,4 +1,4 @@
-# offlinelab
+# OfflineLab
 ### Remote device configurator and collector: 
 
 Report the state of a network topology.
@@ -9,5 +9,5 @@ Report the state of a network topology.
 
 For now it supports Cisco IOS/IOU and *nix systems, more to come.
 
+Here is an example: ![OSPF topology offline lab](http://hpnouri.free.fr/ospfalle2/offlinelabv1.swf)
 
-![Screenshot](http://hpnouri.free.fr/Selection_360.jpg)
