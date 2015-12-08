@@ -1,0 +1,20 @@
+# YAML
+PC4:
+  - device: linux
+  - ip: 172.17.0.4
+  - login: root
+  - password: gns3vpc
+  - enablepassword:
+  - sleep:  0
+  - uname -a
+  - lsb-release -a
+  - ping -c3 100.5.0.5
+  - traceroute 100.5.0.5
+  - ip -4 route show
+  - ip -6 route show
+  - ip -6 a
+  - ifconfig
+  - ip -6 neighbor show
+  - cat /proc/net/if_inet6
+  - sysctl -a
+  - free mto

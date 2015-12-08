@@ -6,7 +6,7 @@ from xml.dom.minidom import Document
 import time
 
 class connect(object):
-    def __init__(self,ci, cmdfile, flog=False, testrun=1, iteration=1, sleep=0, tout=30):
+    def __init__(self,ci,cmdfile,flog=False,testrun=1,iteration=1,sleep=0,tout=30):
 
         self.ci = ci
         self.flog = flog
@@ -22,31 +22,36 @@ class connect(object):
             self.cmdlist = []
             if self.rdata:
                 for key, value in self.rdata.iteritems():
-                    
+
                     #print key.strip('\r\n')
                     self.hostname = key.strip('\r\n')
                     #logging.debug(value)
 
-                    #logging.debug('ip: ' + value[0]['ip'])
-                    self.ip = value[0]['ip']
+                    #logging.debug('device: ' + value[0]['ip'])
+                    self.device = value[0]['device']
+
+
+                    #logging.debug('ip: ' + value[1]['ip'])
+                    self.ip = value[1]['ip']
 
                     #logging.debug('login: ' + value[1]['login'])
-                    self.login = value[1]['login']
+                    self.login = value[2]['login']
 
                     #logging.debug('password: ' + value[2]['password'])
-                    self.passwd = value[2]['password']
-                    
-                    self.enpasswd = value[3]['enablepassword']
+                    self.passwd = value[3]['password']
+
+                    self.enpasswd = value[4]['enablepassword']
 
                     #logging.debug('sleep: ' + str(value[3]['sleep']))
-                    self.sleep = value[4]['sleep']
-                    for cmd in value[5:len(value)+1]:
+                    self.sleep = value[5]['sleep']
+                    for cmd in value[6:len(value)+1]:
                         #print cmd
                         self.cmdlist.append(cmd)
             else:
                     logging.debug('File ',cmdfile,' is empty')
         except IOError:
             logger.error('File ',cmdfile,' NOT found')
+            sys.exit(0)
 
 
     def paraSsh(self):
@@ -65,21 +70,19 @@ class connect(object):
             resp = channel.recv(MAXBYTES)
             #print ('en :', resp)
 
-            if self.enpasswd:
-                # enablepassword!
-                channel.send(self.enpasswd + '\n')
-                time.sleep(1)
-                resp = channel.recv(MAXBYTES)
-                #print ('enable password :', resp)
-
-
-            channel.send('terminal length 0\n')
-            time.sleep(1)
+            if (self.device.lower() == 'cisco') and (self.enpasswd):
+                    # enablepassword
+                    channel.send(self.enpasswd + '\n')
+                    time.sleep(1)
+                    resp = channel.recv(MAXBYTES)
+                    # entire command output once
+                    channel.send('terminal length 0\n')
+                    time.sleep(1)
 
             for cmdi in self.cmdlist:
                 # first we enable!
                 channel.send(cmdi + '\n')
-                time.sleep(1)
+                time.sleep(10)
                 cmdoutput = channel.recv(MAXBYTES)
                 #print cmdoutput
 
@@ -96,11 +99,14 @@ class connect(object):
                     file_out.close()
                     print 'paraSsh: ', cmdi, ' DONE',' Output File ==> ', filename
                     outlist.append({filename:cmdi})
+                else:
+                    print cmdoutput
 
-                #logging.DEBUG(cmdi, ': Sent successfully')
+                logging.debug(cmdi, ': Sent successfully')
 
+            if self.device.lower() == 'cisco':
+                channel.send('do no terminal pager 0\n')
 
-            channel.send('do no terminal pager 0\n')
             time.sleep(1)
 
             sshobj.close()

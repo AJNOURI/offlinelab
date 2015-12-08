@@ -1,26 +1,28 @@
 # YAML
-IOU3:
+IOU6:
   - device: cisco
-  - ip: 192.168.0.203
+  - ip: 192.168.0.206
   - login: admin
   - password: cisco
   - enablepassword: 
   - sleep:  0
-  - sh mpls interface
-  - sh mpls interface detail
-  - sh mpls ldp parameters
-  - sh mpls ldp discovery all
-  - sh mpls ldp neighbor
-  - sh mpls ldp neighbor e0/0
-  - sh mpls ldp neighbor e0/1
-  - sh mpls ldp neighbor e0/0 detail
-  - sh mpls ldp neighbor e0/1 detail
-  - sh mpls ldp bindings
-  - sh mpls forwarding-table
-  - sh mpls forwarding-table detail
-  - sh ip ospf neighbor
-  - sh ip ospf interface
-  - sh ip ospf database
+  - sh ip protocol
+  - sh ip route
+  - sh ip route summary
+  - sh ip route connected
+  - sh ip route static
+  - sh ip cef
+  - sh route-map
+  - sh run
+  - sh adjacency
+  - sh adjacency detail
+  - sh controllers
+  - sh flash
+  - sh buffers
+  - sh memory summary
+  - sh process cpu
+  - sh stacks
+  - sh cdp neighbors
   - sh ip cef
   - sh ip cef adjacency
   - sh ip cef adjacency adj-null

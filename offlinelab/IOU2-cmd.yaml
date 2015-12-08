@@ -1,10 +1,60 @@
 # YAML
-R2:
+IOU2:
+  - device: cisco
   - ip: 192.168.0.202
   - login: admin
   - password: cisco
-  - enablepassword: cisco 
+  - enablepassword: 
   - sleep:  0
-  - sh run
+  - sh ip cef vrf CustomerA
+  - sh ip cef vrf CustomerA detail
+  - sh ip vrf interfaces CustomerA
+  - sh ip protocols vrf CustomerA
+  - sh ip route vrf CustomerA
+  - sh ip cef vrf CustomerB
+  - sh ip cef vrf CustomerB detail
+  - sh ip vrf interfaces CustomerB
+  - sh ip protocols vrf CustomerB
+  - sh ip route vrf CustomerB
+  - sh mpls interface
+  - sh mpls interface detail
+  - sh mpls ldp parameters
+  - sh mpls ldp discovery all
+  - sh mpls ldp neighbor
+  - sh mpls ldp neighbor e0/0
+  - sh mpls ldp neighbor e0/0 detail
+  - sh mpls ldp bindings
+  - sh mpls forwarding-table
+  - sh mpls forwarding-table detail
+  - sh ip ospf neighbor
+  - sh ip ospf interface
+  - sh ip ospf database
+  - sh ip cef
+  - sh ip cef adjacency
+  - sh ip cef adjacency adj-null
+  - sh ip cef adjacency discard
+  - sh ip cef adjacency drop
+  - sh ip cef adjacency glean
+  - sh ip cef adjacency punt
+  - sh ip protocol
+  - sh ip route vrf CustomerA
+  - sh ip route vrf CustomerB
   - sh ip route
-  - sh ip int brief
+  - sh ip route summary
+  - sh ip route connected
+  - sh ip route static
+  - sh ip vrf
+  - sh ip vrf interfaces
+  - sh ip vrf detail
+  - sh ip cef
+  - sh route-map
+  - sh run
+  - sh adjacency
+  - sh adjacency detail
+  - sh controllers
+  - sh flash
+  - sh buffers
+  - sh memory summary
+  - sh process cpu
+  - sh stacks
+  - sh cdp neighbors

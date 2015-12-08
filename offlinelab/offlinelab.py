@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
 import yaml
+import sys
 import pexpect
 import logging
 from xml.dom.minidom import Document
@@ -45,8 +46,8 @@ def main():
     #arg3 = ''
     arg4 = '-x'
     #arg4 = ''
-    arg5 = '-s'
-    #arg5 = ''
+    #arg5 = '-s'
+    arg5 = ''
     if arg3 == '-c':
         filelog = True
     else:
@@ -63,17 +64,21 @@ def main():
         # *** XML ***
 
     collectfilelist = [
-        "IOU1-cmd.yaml",
-        "IOU2-cmd.yaml",
-        "IOU3-cmd.yaml",
-        "IOU4-cmd.yaml",
-        "IOU5-cmd.yaml"
+#        'IOU1-cmd.yaml',
+#        'IOU2-cmd.yaml',
+#        'IOU3-cmd.yaml',
+#        'IOU4-cmd.yaml',
+#        'IOU5-cmd.yaml',
+#        'IOU6-cmd.yaml',
+#        'IOU7-cmd.yaml',
+        'PC4-cmd.yaml',
+        'PC5-cmd.yaml',
+        'PC6-cmd.yaml',
+        'PC7-cmd.yaml'
         ]
 
     caselist = [
-        {'case': 'Case1 -Everything OK', 'casefile': 'case1'},
-        {'case': 'Case2 -IOU3 e0/0 DOWN', 'casefile': 'case2'},
-        {'case': 'Case3 -IOU4 e0/0 DOWN', 'casefile': 'case3'}
+        {'case': 'Case1: MPLS-VPN OSPF core + PE-CE static routing', 'casefile': 'case1'}
     ]
 
     testruns = 1
@@ -153,63 +158,74 @@ def main():
                         stream = open(collectfile)
                         rdata = yaml.load(stream)
 
-                        for key, value in rdata.iteritems():
-                            cmdlist = []
-
-                            hostname = key.strip('\r\n')
-                            logger.debug('hostname: ' + hostname)
-                            logger.debug('ip: ' + value[0]['ip'])
-                            ip = value[0]['ip']
-                            
-                            logger.debug('login: ' + value[1]['login'])
-                            login = value[1]['login']
-                            
-                            logger.debug('password: ' + value[2]['password'])
-                            password = value[2]['password']
-                            
-                            logger.debug('enablepassword: ' + str(value[3]['enablepassword']))
-                            enablepassword = value[3]['enablepassword']                            
-                            
-                            logger.debug('sleep: ' + str(value[4]['sleep']))
-                            sleep = value[4]['sleep']
-
-                            if arg4 == '-x':
-                                # *** XML ***
-                                # Create router element
-                                router = doc.createElement("router")
-                                router.setAttribute("id", hostname)
-                                testrun.appendChild(router)
-                                # *** XML ***
-
-                            conn = cisco.connect(str(casei+1), collectfile, filelog, str(trun), str(iterations), sleep, tout=300)
-                            # paraSsh returns a list of dictionaries [{filename:command}...]
-                            rcmdfile = conn.paraSsh()
-                            logger.debug('result of conn.paraSsh(): %s', rcmdfile)
-
-                            if arg4 == '-x':
-                                for itm in rcmdfile:
-                                    for kfile, vcmd in itm.iteritems():
-                                        # *** XML ***
-                                        # Create a command node tag
-                                        command = doc.createElement("command")
-                                        router.appendChild(command)
-                                        # Create a cmdname node tag
-                                        cmdname = doc.createElement("cmdname")
-                                        command.appendChild(cmdname)
-                                        # Give the cmdname node tag text
-                                        cmdnametext = doc.createTextNode(vcmd)
-                                        cmdname.appendChild(cmdnametext)
-                                        # Create a cmdfile element
-                                        cmdfile = doc.createElement("cmdfile")
-                                        command.appendChild(cmdfile)
-                                        # Give the cmdfile elemenet text
-                                        # filename returned from cisco_telnet
-                                        cmdfiletext = doc.createTextNode(kfile)
-                                        cmdfile.appendChild(cmdfiletext)
-                                        # *** XML ***
-
                     except IOError:
                         logger.error('file %s NOT found', collectfile)
+                        sys.exit(0)                        
+                        
+#                    try:    
+                        
+                    for key, value in rdata.iteritems():
+                        cmdlist = []
+
+                        hostname = key.strip('\r\n')
+                        logger.debug('hostname: ' + hostname)
+
+                        logger.debug('device: ' + value[0]['device'])
+                        ip = value[0]['device']
+
+                        logger.debug('ip: ' + value[1]['ip'])
+                        ip = value[1]['ip']
+
+                        logger.debug('login: ' + value[2]['login'])
+                        login = value[2]['login']
+
+                        logger.debug('password: ' + value[3]['password'])
+                        password = value[3]['password']
+
+                        logger.debug('enablepassword: ' + str(value[4]['enablepassword']))
+                        enablepassword = value[4]['enablepassword']
+
+                        logger.debug('sleep: ' + str(value[5]['sleep']))
+                        sleep = value[5]['sleep']
+
+                        if arg4 == '-x':
+                            # *** XML ***
+                            # Create router element
+                            router = doc.createElement("router")
+                            router.setAttribute("id", hostname)
+                            testrun.appendChild(router)
+                            # *** XML ***
+
+                        conn = cisco.connect(str(casei+1), collectfile, filelog, str(trun), str(iterations), sleep, tout=300)
+                        # paraSsh returns a list of dictionaries [{filename:command}...]
+                        rcmdfile = conn.paraSsh()
+                        logger.debug('result of conn.paraSsh(): %s', rcmdfile)
+
+                        if arg4 == '-x':
+                            for itm in rcmdfile:
+                                for kfile, vcmd in itm.iteritems():
+                                    # *** XML ***
+                                    # Create a command node tag
+                                    command = doc.createElement("command")
+                                    router.appendChild(command)
+                                    # Create a cmdname node tag
+                                    cmdname = doc.createElement("cmdname")
+                                    command.appendChild(cmdname)
+                                    # Give the cmdname node tag text
+                                    cmdnametext = doc.createTextNode(vcmd)
+                                    cmdname.appendChild(cmdnametext)
+                                    # Create a cmdfile element
+                                    cmdfile = doc.createElement("cmdfile")
+                                    command.appendChild(cmdfile)
+                                    # Give the cmdfile elemenet text
+                                    # filename returned from cisco_telnet
+                                    cmdfiletext = doc.createTextNode(kfile)
+                                    cmdfile.appendChild(cmdfiletext)
+                                    # *** XML ***
+#                    except:
+#                        logger.error('Parameter error inside %s ', collectfile)
+#                        sys.exit(0) 
+
 
             logger.info(' **** Test run ' + str(trun) + ' COMPLETED SUCCESSFULLY ****\n\n ')
         logger.info(' **** Case ' + str(casei+1) + ' collecting device states COMPLETED SUCCESSFULLY ****\n\n\n ')
