@@ -73,8 +73,10 @@ Example of test case configuration file for a Cisco device: case1.yaml
       - interface e0/0
       - sh
 
+An example of the resulting xml file:
+![mycombos.xml](http://hpnouri.free.fr/ospfalle2/mycombos.xml)
 
-Here is an example: ![OSPF topology offline lab](http://hpnouri.free.fr/ospfalle2/offlinelabv1.swf)
+Here is a link to the final outcome: ![OSPF topology offline lab](http://hpnouri.free.fr/ospfalle2/offlinelabv1.swf)
 
 ![screenshot](http://hpnouri.free.fr/Selection_360.jpg)
 
