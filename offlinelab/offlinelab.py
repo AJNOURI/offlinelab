@@ -8,6 +8,7 @@ from xml.dom.minidom import Document
 import time
 from logmod import *
 import cisco
+import os.path
 
 __author__ = 'AJ NOURI'
 __date__ = '26/11/2015'
@@ -64,17 +65,20 @@ def main():
         # *** XML ***
 
     collectfilelist = [
-#        'IOU1-cmd.yaml',
-#        'IOU2-cmd.yaml',
-#        'IOU3-cmd.yaml',
-#        'IOU4-cmd.yaml',
-#        'IOU5-cmd.yaml',
+        'INTERNET-cmd.yaml',
+        'IOU1-cmd.yaml',
+        'IOU2-cmd.yaml',
+        'IOU3-cmd.yaml',
+        'IOU4-cmd.yaml',
+        'IOU5-cmd.yaml',
 #        'IOU6-cmd.yaml',
 #        'IOU7-cmd.yaml',
-        'PC4-cmd.yaml',
-        'PC5-cmd.yaml',
-        'PC6-cmd.yaml',
-        'PC7-cmd.yaml'
+#        'PC2-cmd.yaml',
+#        'PC3-cmd.yaml',
+#        'PC4-cmd.yaml',
+#        'PC5-cmd.yaml',
+#        'PC6-cmd.yaml',
+#        'PC7-cmd.yaml'
         ]
 
     caselist = [
@@ -154,16 +158,16 @@ def main():
                     print collectfile
                     #remoteDev(collectfile, flog=True)
 
-                    try:
-                        stream = open(collectfile)
-                        rdata = yaml.load(stream)
+                    while True:
+                        if not os.path.isfile(collectfile):
+                            logger.error('file %s NOT found', collectfile)
+                            ctn = raw_input('Make sure to correct the issue and press any Key to continue')
+                            continue
+                        else:
+                            stream = open(collectfile)
+                            rdata = yaml.load(stream)
+                            break
 
-                    except IOError:
-                        logger.error('file %s NOT found', collectfile)
-                        sys.exit(0)                        
-                        
-#                    try:    
-                        
                     for key, value in rdata.iteritems():
                         cmdlist = []
 
@@ -185,9 +189,6 @@ def main():
                         logger.debug('enablepassword: ' + str(value[4]['enablepassword']))
                         enablepassword = value[4]['enablepassword']
 
-                        logger.debug('sleep: ' + str(value[5]['sleep']))
-                        sleep = value[5]['sleep']
-
                         if arg4 == '-x':
                             # *** XML ***
                             # Create router element
@@ -196,7 +197,7 @@ def main():
                             testrun.appendChild(router)
                             # *** XML ***
 
-                        conn = cisco.connect(str(casei+1), collectfile, filelog, str(trun), str(iterations), sleep, tout=300)
+                        conn = cisco.connect(str(casei+1), collectfile, filelog, str(trun), str(iterations), tout=300)
                         # paraSsh returns a list of dictionaries [{filename:command}...]
                         rcmdfile = conn.paraSsh()
                         logger.debug('result of conn.paraSsh(): %s', rcmdfile)
@@ -222,10 +223,6 @@ def main():
                                     cmdfiletext = doc.createTextNode(kfile)
                                     cmdfile.appendChild(cmdfiletext)
                                     # *** XML ***
-#                    except:
-#                        logger.error('Parameter error inside %s ', collectfile)
-#                        sys.exit(0) 
-
 
             logger.info(' **** Test run ' + str(trun) + ' COMPLETED SUCCESSFULLY ****\n\n ')
         logger.info(' **** Case ' + str(casei+1) + ' collecting device states COMPLETED SUCCESSFULLY ****\n\n\n ')
