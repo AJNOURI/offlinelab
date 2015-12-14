@@ -1,43 +1,10 @@
-2015-11-29 05:44:47,757 - __main__ - INFO - main -  **** Initialization started... ****
-2015-11-29 05:44:57,096 - __main__ - INFO - main -  **** Initialization COMPLETED ****
-2015-11-29 05:44:57,096 - __main__ - INFO - main -  **** Applying Case 1 conditions **** 
-2015-11-29 05:44:57,097 - __main__ - INFO - main -  **** Case 1 conditions APPLIED SUCCESSFULLY **** 
-2015-11-29 05:44:57,097 - __main__ - INFO - main -  **** Test run 1 started **** 
-2015-11-29 05:44:57,097 - __main__ - INFO - main -  **** Case 1 collecting device states **** 
-2015-11-29 05:45:23,529 - __main__ - ERROR - main - file IOU5-cmd.yaml NOT found
-2015-11-29 05:45:23,529 - __main__ - INFO - main -  **** Test run 1 COMPLETED SUCCESSFULLY ****
+2015-12-14 07:20:28,104 - __main__ - INFO - main -  **** Test run 1 started **** 
+2015-12-14 07:20:28,104 - __main__ - INFO - main -  **** Case 1 collecting device states **** 
+2015-12-14 07:28:06,799 - __main__ - INFO - main -  **** Test run 1 COMPLETED SUCCESSFULLY ****
 
  
-2015-11-29 05:45:23,529 - __main__ - INFO - main -  **** Case 1 collecting device states COMPLETED SUCCESSFULLY ****
+2015-12-14 07:28:06,800 - __main__ - INFO - main -  **** Case 1 collecting device states COMPLETED SUCCESSFULLY ****
 
 
  
-2015-11-29 05:45:23,530 - __main__ - INFO - main -  **** Initialization started... ****
-2015-11-29 05:45:32,886 - __main__ - INFO - main -  **** Initialization COMPLETED ****
-2015-11-29 05:45:32,887 - __main__ - INFO - main -  **** Applying Case 2 conditions **** 
-2015-11-29 05:45:50,229 - __main__ - INFO - main -  **** Case 2 conditions APPLIED SUCCESSFULLY **** 
-2015-11-29 05:45:50,229 - __main__ - INFO - main -  **** Test run 1 started **** 
-2015-11-29 05:45:50,229 - __main__ - INFO - main -  **** Case 2 collecting device states **** 
-2015-11-29 05:46:16,570 - __main__ - ERROR - main - file IOU5-cmd.yaml NOT found
-2015-11-29 05:46:16,570 - __main__ - INFO - main -  **** Test run 1 COMPLETED SUCCESSFULLY ****
-
- 
-2015-11-29 05:46:16,570 - __main__ - INFO - main -  **** Case 2 collecting device states COMPLETED SUCCESSFULLY ****
-
-
- 
-2015-11-29 05:46:16,570 - __main__ - INFO - main -  **** Initialization started... ****
-2015-11-29 05:46:25,910 - __main__ - INFO - main -  **** Initialization COMPLETED ****
-2015-11-29 05:46:25,910 - __main__ - INFO - main -  **** Applying Case 3 conditions **** 
-2015-11-29 05:46:43,263 - __main__ - INFO - main -  **** Case 3 conditions APPLIED SUCCESSFULLY **** 
-2015-11-29 05:46:43,263 - __main__ - INFO - main -  **** Test run 1 started **** 
-2015-11-29 05:46:43,263 - __main__ - INFO - main -  **** Case 3 collecting device states **** 
-2015-11-29 05:47:09,621 - __main__ - ERROR - main - file IOU5-cmd.yaml NOT found
-2015-11-29 05:47:09,621 - __main__ - INFO - main -  **** Test run 1 COMPLETED SUCCESSFULLY ****
-
- 
-2015-11-29 05:47:09,621 - __main__ - INFO - main -  **** Case 3 collecting device states COMPLETED SUCCESSFULLY ****
-
-
- 
-2015-11-29 05:47:09,624 - __main__ - INFO - main - XML report built successfully
+2015-12-14 07:28:06,828 - __main__ - INFO - main - XML report built successfully

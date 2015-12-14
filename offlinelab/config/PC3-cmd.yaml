@@ -1,21 +1,21 @@
 # YAML
-PC4:
+PC2:
   - device: linux
-  - ip: 172.17.0.4
+  - ip: 172.17.0.3
   - login: root
   - password: gns3vpc
-  - enablepassword:
+  - enablepassword: 
   - sleep:  2
+  - ping -c3 70.0.0.7
   - ping -c3 20.0.0.2
-  - ping -c3 30.0.0.3
   - ping -c3 50.0.0.5
   - ping -c3 60.0.0.6
-  - ping -c3 70.0.0.7
+  - ping -c3 40.0.0.4
+  - traceroute 70.0.0.7
   - traceroute 20.0.0.2
-  - traceroute 30.0.0.3
   - traceroute 50.0.0.5
   - traceroute 60.0.0.6
-  - traceroute 70.0.0.7
+  - traceroute 40.0.0.4
   - uname -a
   - lsb-release -a
   - ip -4 route show

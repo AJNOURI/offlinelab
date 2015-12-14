@@ -2,13 +2,14 @@
 
 import yaml
 import sys
+import time
 import pexpect
 import logging
-from xml.dom.minidom import Document
-import time
-from logmod import *
-import cisco
 import os.path
+from xml.dom.minidom import Document
+from basessh.cisco import connect
+from logmod.logmod import logclass
+
 
 __author__ = 'AJ NOURI'
 __date__ = '26/11/2015'
@@ -21,26 +22,16 @@ def main():
 
     """
     TODO
-    - add pause between test cases.
-    - optional command arguments:
-        - set cases
-            - possibility to set cases without collecting device states or xml output
-        - collect states (file log)
-            - xml output file (always with file log)
-    - memorise last finished test, continue from there
+    - Arguments
+    - memorise last finished test, continue from there?
     - manual collect for each case without applying casefiles
-
     - manual including cases
     - manual including initializing state
 
     TRBL
     - flog=300, issue with order of parameters in the function.
-    - python logging from inside functions
     """
-    logger = logging.getLogger(__name__)
-    handler = logInit(level=logging.DEBUG)
-    logger.addHandler(handler)
-
+    
     #arg2 = '-m'
     arg2 = ''
     arg3 = '-c'
@@ -105,14 +96,14 @@ def main():
             stream = open('init.yaml')
             rdata = yaml.load(stream)
             #print rdata
-            conn = cisco.connect('1', 'init.yaml', False)
+            conn = connect('1', 'init.yaml', False)
             conn.paraSsh()
             logger.info(' **** Initialization COMPLETED ****')
 
             # Apply state conditions for each test case
             #
             logger.info(' **** Applying Case ' + str(casei+1) + ' conditions **** ')
-            conn = cisco.connect('1', casefile, False)
+            conn = connect('1', casefile, False)
             conn.paraSsh()
             logger.info(' **** Case ' + str(casei+1) + ' conditions APPLIED SUCCESSFULLY **** ')
 
@@ -197,7 +188,7 @@ def main():
                             testrun.appendChild(router)
                             # *** XML ***
 
-                        conn = cisco.connect(str(casei+1), collectfile, filelog, str(trun), str(iterations), tout=300)
+                        conn = connect(str(casei+1), collectfile, filelog, str(trun), str(iterations), tout=300)
                         # paraSsh returns a list of dictionaries [{filename:command}...]
                         rcmdfile = conn.paraSsh()
                         logger.debug('result of conn.paraSsh(): %s', rcmdfile)
@@ -237,5 +228,11 @@ def main():
         # *** XML ***
 
 if __name__ == "__main__":
+    
+    logger = logging.getLogger(__name__)
+    logobj = logclass()
+    logobj.logInit()
+    logger.addHandler(logobj.handler)
+    
     main()
 

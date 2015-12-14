@@ -4,16 +4,21 @@ import paramiko
 import logging
 from xml.dom.minidom import Document
 import time
+import sys
+
+
+logger = logging.getLogger(__name__)
+
 
 class connect(object):
-    def __init__(self,ci,cmdfile,flog=False,testrun=1,iteration=1,sleep=0,tout=30):
+    def __init__(self,ci,cmdfile,flog=False,testrun=1,iteration=1,tout=30):
 
         self.ci = ci
         self.flog = flog
         self.testrun = testrun
         self.iteration = iteration
-        self.sleep = sleep
         self.tout = tout
+        self.manualresult = []
 
         try:
             stream = open(cmdfile)
@@ -50,40 +55,56 @@ class connect(object):
             else:
                     logging.debug('File ',cmdfile,' is empty')
         except IOError:
-            logger.error('File ',cmdfile,' NOT found')
+            logging.error('File ',cmdfile,' NOT found')
             sys.exit(0)
+        
+        
+        self.MAXBYTES = 999999
+        self.outlist = []
+        try:
+            self.sshobj = paramiko.SSHClient()
+            self.sshobj.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+            self.sshobj.connect(self.ip, username=self.login, password=self.passwd)
+            self.sshobj.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+            self.channel = self.sshobj.invoke_shell()
+        
+        except Exception,e:
+            logging.error('Paramiko init exception: %s',str(e))
+            sys.exit(0)            
 
-
+            
     def paraSsh(self):
         if self.rdata:
-            MAXBYTES = 999999
-            outlist = []
 
-            sshobj = paramiko.SSHClient()
-            sshobj.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-            sshobj.connect(self.ip, username=self.login, password=self.passwd)
-            sshobj.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-            channel = sshobj.invoke_shell()
 
-            channel.send('en\n')
+            self.channel.send('en\n')
             time.sleep(1)
-            resp = channel.recv(MAXBYTES)
-            #print ('en :', resp)
+            resp = self.channel.recv(self.MAXBYTES)
+            
+            logging.debug(' ========> Device type: ', (self.device.lower() == 'cisco'))
 
-            if (self.device.lower() == 'cisco') and (self.enpasswd):
+            if (self.enpasswd):
+                    logging.debug('========> Set terminal length')
                     # enablepassword
-                    channel.send(self.enpasswd + '\n')
+                    self.channel.send(self.enpasswd + '\n')
                     time.sleep(1)
-                    resp = channel.recv(MAXBYTES)
-                    # entire command output once
-                    channel.send('terminal length 0\n')
-                    time.sleep(1)
+                    resp = self.channel.recv(MAXBYTES)
+                    logging.debug(' Result of password: ', resp)
 
+                    
+            if (self.device.lower() == 'cisco'):
+                    # entire command output once
+                    self.channel.send('terminal length 0\n')
+                    time.sleep(1)
+                    resp = self.channel.recv(self.MAXBYTES)
+                    logging.debug(' Result of terminal length 0: ', resp)
+
+                    
             for cmdi in self.cmdlist:
                 # first we enable!
-                channel.send(cmdi + '\n')
-                time.sleep(10)
-                cmdoutput = channel.recv(MAXBYTES)
+                self.channel.send(cmdi + '\n')
+                time.sleep(self.sleep)
+                cmdoutput = self.channel.recv(self.MAXBYTES)
                 #print cmdoutput
 
                 if self.flog:
@@ -97,20 +118,20 @@ class connect(object):
                     with open(filename, 'w') as file_out:
                         file_out.write(cmdoutput)
                     file_out.close()
-                    print 'paraSsh: ', cmdi, ' DONE',' Output File ==> ', filename
-                    outlist.append({filename:cmdi})
+                    logging.info('paraSsh: %s  DONE Output File ==> %s',str(cmdi), str(filename))
+                    self.outlist.append({filename:cmdi})
                 else:
-                    print cmdoutput
+                    self.manualresult.append(cmdoutput)
 
                 logging.debug(cmdi, ': Sent successfully')
 
             if self.device.lower() == 'cisco':
-                channel.send('do no terminal pager 0\n')
+                self.channel.send('do no terminal pager 0\n')
 
             time.sleep(1)
 
-            sshobj.close()
+            self.sshobj.close()
             time.sleep(self.sleep)
 
-            return outlist
+            return self.outlist
 
