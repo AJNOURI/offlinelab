@@ -1,0 +1,44 @@
+sh ip cef
+Prefix               Next Hop             Interface
+0.0.0.0/0            no route
+0.0.0.0/8            drop
+0.0.0.0/32           receive              
+127.0.0.0/8          drop
+192.168.0.0/24       attached             Ethernet3/3
+192.168.0.0/32       receive              Ethernet3/3
+192.168.0.121/32     attached             Ethernet3/3
+192.168.0.200/32     receive              Ethernet3/3
+192.168.0.255/32     receive              Ethernet3/3
+192.168.12.0/24      attached             Ethernet1/0
+192.168.12.0/32      receive              Ethernet1/0
+192.168.12.2/32      attached             Ethernet1/0
+192.168.12.100/32    receive              Ethernet1/0
+192.168.12.255/32    receive              Ethernet1/0
+192.168.13.0/24      attached             Ethernet0/3
+192.168.13.0/32      receive              Ethernet0/3
+192.168.13.3/32      attached             Ethernet0/3
+192.168.13.100/32    receive              Ethernet0/3
+192.168.13.255/32    receive              Ethernet0/3
+192.168.14.0/24      attached             Ethernet0/0
+192.168.14.0/32      receive              Ethernet0/0
+192.168.14.4/32      attached             Ethernet0/0
+192.168.14.100/32    receive              Ethernet0/0
+192.168.14.255/32    receive              Ethernet0/0
+192.168.15.0/24      attached             Ethernet0/1
+192.168.15.0/32      receive              Ethernet0/1
+192.168.15.5/32      attached             Ethernet0/1
+192.168.15.100/32    receive              Ethernet0/1
+192.168.15.255/32    receive              Ethernet0/1
+192.168.16.0/24      attached             Ethernet0/2
+192.168.16.0/32      receive              Ethernet0/2
+192.168.16.100/32    receive              Ethernet0/2
+192.168.16.255/32    receive              Ethernet0/2
+192.168.17.0/24      attached             Ethernet1/1
+192.168.17.0/32      receive              Ethernet1/1
+192.168.17.100/32    receive              Ethernet1/1
+192.168.17.255/32    receive              Ethernet1/1
+224.0.0.0/4          drop
+224.0.0.0/24         receive              
+240.0.0.0/4          drop
+255.255.255.255/32   receive              
+internet#

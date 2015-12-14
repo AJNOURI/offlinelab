@@ -1,0 +1,3 @@
+sh ip route vrf Customer9
+% IP routing table vrf Customer9 does not exist
+IOU1#

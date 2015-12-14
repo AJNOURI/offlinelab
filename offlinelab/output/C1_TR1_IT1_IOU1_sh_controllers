@@ -1,0 +1,354 @@
+sh controllers
+Interface Ethernet0/0
+Hardware is AMD Unknown
+ADDR: EBB67DF0, FASTSEND: 8350F20, MCI_INDEX: 0
+DIST ROUTE ENABLED: 0
+Route Cache Flag: 11
+ amdp2_instance=0xEBB69138, registers=0xEBB67DA0, ib=0xEBB69680
+ rx ring entries=32, tx ring entries=64
+ rxring=0xEBB696C8, rxr shadow=0xEBB698F8, rx_head=20, rx_tail=0
+ txring=0xEBB699A8, txr shadow=0xEBB69DD8, tx_head=17, tx_tail=17, tx_count=0
+ running=1, port id=0xC957228
+ Software MAC address filter(hash:length/addr/mask/hits):
+  0xC0:  0  0100.0ccc.cccc  0000.0000.0000         0
+  0xC5:  0  0180.c200.0007  0000.0000.0000         0
+ spurious_idon=0, filtered_pak=0, throttled=0, enabled=0, disabled=0
+ rx_framing_err=0, rx_overflow_err=0, rx_buffer_err=0
+ rx_bpe_err=0, rx_soft_overflow_err=0, rx_no_enp=0, rx_discard=0
+ tx_one_col_err=0, tx_more_col_err=0, tx_no_enp=0, tx_deferred_err=0
+ tx_underrun_err=0, tx_late_collision_err=0, tx_loss_carrier_err=0
+ tx_exc_collision_err=9739, tx_buff_err=0, fatal_tx_err=0
+ hsrp_conf=0, need_af_check=0
+ tx_limited=0(64)
+
+Interface Ethernet0/1
+Hardware is AMD Unknown
+ADDR: EBB7A530, FASTSEND: 8350F20, MCI_INDEX: 0
+DIST ROUTE ENABLED: 0
+Route Cache Flag: 11
+ amdp2_instance=0xEBB7B878, registers=0xEBB7A4E0, ib=0xEBB7BD68
+ rx ring entries=32, tx ring entries=64
+ rxring=0xEBB7BDB0, rxr shadow=0xEBB7BFE0, rx_head=31, rx_tail=0
+ txring=0xEBB7C090, txr shadow=0xEBB7C4C0, tx_head=10, tx_tail=10, tx_count=0
+ running=1, port id=0xC957280
+ Software MAC address filter(hash:length/addr/mask/hits):
+  0xC0:  0  0100.0ccc.cccc  0000.0000.0000         0
+  0xC5:  0  0180.c200.0007  0000.0000.0000         0
+ spurious_idon=0, filtered_pak=0, throttled=0, enabled=0, disabled=0
+ rx_framing_err=0, rx_overflow_err=0, rx_buffer_err=0
+ rx_bpe_err=0, rx_soft_overflow_err=0, rx_no_enp=0, rx_discard=0
+ tx_one_col_err=0, tx_more_col_err=0, tx_no_enp=0, tx_deferred_err=0
+ tx_underrun_err=0, tx_late_collision_err=0, tx_loss_carrier_err=0
+ tx_exc_collision_err=12168, tx_buff_err=0, fatal_tx_err=0
+ hsrp_conf=0, need_af_check=0
+ tx_limited=0(64)
+
+Interface Ethernet0/2
+Hardware is AMD Unknown
+ADDR: EBB8CBB0, FASTSEND: 8350F20, MCI_INDEX: 0
+DIST ROUTE ENABLED: 0
+Route Cache Flag: 11
+ amdp2_instance=0xEBB8DEF8, registers=0xEBB8CB60, ib=0xEBB8E3E8
+ rx ring entries=32, tx ring entries=64
+ rxring=0xEBB8E430, rxr shadow=0xEBB8E660, rx_head=22, rx_tail=0
+ txring=0xEBB8E710, txr shadow=0xEBB8EB40, tx_head=25, tx_tail=25, tx_count=0
+ running=1, port id=0xC9572D8
+ Software MAC address filter(hash:length/addr/mask/hits):
+  0xC0:  0  0100.0ccc.cccc  0000.0000.0000         0
+  0xC5:  0  0180.c200.0007  0000.0000.0000         0
+ spurious_idon=0, filtered_pak=0, throttled=0, enabled=0, disabled=0
+ rx_framing_err=0, rx_overflow_err=0, rx_buffer_err=0
+ rx_bpe_err=0, rx_soft_overflow_err=0, rx_no_enp=0, rx_discard=0
+ tx_one_col_err=0, tx_more_col_err=0, tx_no_enp=0, tx_deferred_err=0
+ tx_underrun_err=0, tx_late_collision_err=0, tx_loss_carrier_err=0
+ tx_exc_collision_err=12172, tx_buff_err=0, fatal_tx_err=0
+ hsrp_conf=0, need_af_check=0
+ tx_limited=0(64)
+
+Interface Ethernet0/3
+Hardware is AMD Unknown
+ADDR: EBB9FFE0, FASTSEND: 8350F20, MCI_INDEX: 0
+DIST ROUTE ENABLED: 0
+Route Cache Flag: 11
+ amdp2_instance=0xEBBA1328, registers=0xEBB9FF90, ib=0xEBBA1818
+ rx ring entries=32, tx ring entries=64
+ rxring=0xEBBA1860, rxr shadow=0xEBBA1A90, rx_head=24, rx_tail=0
+ txring=0xEBBA1B40, txr shadow=0xEBBA1F70, tx_head=27, tx_tail=27, tx_count=0
+ running=1, port id=0xC957330
+ Software MAC address filter(hash:length/addr/mask/hits):
+  0xC0:  0  0100.0ccc.cccc  0000.0000.0000         0
+  0xC5:  0  0180.c200.0007  0000.0000.0000         0
+ spurious_idon=0, filtered_pak=0, throttled=0, enabled=0, disabled=0
+ rx_framing_err=0, rx_overflow_err=0, rx_buffer_err=0
+ rx_bpe_err=0, rx_soft_overflow_err=0, rx_no_enp=0, rx_discard=0
+ tx_one_col_err=0, tx_more_col_err=0, tx_no_enp=0, tx_deferred_err=0
+ tx_underrun_err=0, tx_late_collision_err=0, tx_loss_carrier_err=0
+ tx_exc_collision_err=91, tx_buff_err=0, fatal_tx_err=0
+ hsrp_conf=0, need_af_check=0
+ tx_limited=0(64)
+
+Interface Ethernet1/0
+Hardware is AMD Unknown
+ADDR: EBBB26B0, FASTSEND: 8350F20, MCI_INDEX: 0
+DIST ROUTE ENABLED: 0
+Route Cache Flag: 11
+ amdp2_instance=0xEBBB39F8, registers=0xEBBB2660, ib=0xEBBB3EE8
+ rx ring entries=32, tx ring entries=64
+ rxring=0xEBBB3F30, rxr shadow=0xEBBB4160, rx_head=8, rx_tail=0
+ txring=0xEBBB4210, txr shadow=0xEBBB4640, tx_head=8, tx_tail=8, tx_count=0
+ running=1, port id=0xC957388
+ Software MAC address filter(hash:length/addr/mask/hits):
+  0xC0:  0  0100.0ccc.cccc  0000.0000.0000         0
+  0xC5:  0  0180.c200.0007  0000.0000.0000         0
+ spurious_idon=0, filtered_pak=0, throttled=0, enabled=0, disabled=0
+ rx_framing_err=0, rx_overflow_err=0, rx_buffer_err=0
+ rx_bpe_err=0, rx_soft_overflow_err=0, rx_no_enp=0, rx_discard=0
+ tx_one_col_err=0, tx_more_col_err=0, tx_no_enp=0, tx_deferred_err=0
+ tx_underrun_err=0, tx_late_collision_err=0, tx_loss_carrier_err=0
+ tx_exc_collision_err=12175, tx_buff_err=0, fatal_tx_err=0
+ hsrp_conf=0, need_af_check=0
+ tx_limited=0(64)
+
+Interface Ethernet1/1
+Hardware is AMD Unknown
+ADDR: EBBC4D30, FASTSEND: 8350F20, MCI_INDEX: 0
+DIST ROUTE ENABLED: 0
+Route Cache Flag: 11
+ amdp2_instance=0xEBBC6078, registers=0xEBBC4CE0, ib=0xEBBC6568
+ rx ring entries=32, tx ring entries=64
+ rxring=0xEBBC65B0, rxr shadow=0xEBBC67E0, rx_head=28, rx_tail=0
+ txring=0xEBBC6890, txr shadow=0xEBBC6CC0, tx_head=40, tx_tail=40, tx_count=0
+ running=1, port id=0xC9573E0
+ Software MAC address filter(hash:length/addr/mask/hits):
+  0xC0:  0  0100.0ccc.cccc  0000.0000.0000         0
+  0xC5:  0  0180.c200.0007  0000.0000.0000         0
+ spurious_idon=0, filtered_pak=0, throttled=0, enabled=0, disabled=0
+ rx_framing_err=0, rx_overflow_err=0, rx_buffer_err=0
+ rx_bpe_err=0, rx_soft_overflow_err=0, rx_no_enp=0, rx_discard=0
+ tx_one_col_err=0, tx_more_col_err=0, tx_no_enp=0, tx_deferred_err=0
+ tx_underrun_err=0, tx_late_collision_err=0, tx_loss_carrier_err=0
+ tx_exc_collision_err=12155, tx_buff_err=0, fatal_tx_err=0
+ hsrp_conf=0, need_af_check=0
+ tx_limited=0(64)
+
+Interface Ethernet1/2
+Hardware is AMD Unknown
+ADDR: EBBD8160, FASTSEND: 8350F20, MCI_INDEX: 0
+DIST ROUTE ENABLED: 0
+Route Cache Flag: 11
+ amdp2_instance=0xEBBD94A8, registers=0xEBBD8110, ib=0xEBBD9998
+ rx ring entries=32, tx ring entries=64
+ rxring=0xEBBD99E0, rxr shadow=0xEBBD9C10, rx_head=0, rx_tail=0
+ txring=0xEBBD9CC0, txr shadow=0xEBBDA0F0, tx_head=15, tx_tail=15, tx_count=0
+ running=1, port id=0xC957438
+ Software MAC address filter(hash:length/addr/mask/hits):
+  0xC0:  0  0100.0ccc.cccc  0000.0000.0000         0
+  0xC5:  0  0180.c200.0007  0000.0000.0000         0
+ spurious_idon=0, filtered_pak=0, throttled=0, enabled=0, disabled=0
+ rx_framing_err=0, rx_overflow_err=0, rx_buffer_err=0
+ rx_bpe_err=0, rx_soft_overflow_err=0, rx_no_enp=0, rx_discard=0
+ tx_one_col_err=0, tx_more_col_err=0, tx_no_enp=0, tx_deferred_err=0
+ tx_underrun_err=0, tx_late_collision_err=0, tx_loss_carrier_err=0
+ tx_exc_collision_err=12109, tx_buff_err=0, fatal_tx_err=0
+ hsrp_conf=0, need_af_check=0
+ tx_limited=0(64)
+
+Interface Ethernet1/3
+Hardware is AMD Unknown
+ADDR: EBBEA830, FASTSEND: 8350F20, MCI_INDEX: 0
+DIST ROUTE ENABLED: 0
+Route Cache Flag: 11
+ amdp2_instance=0xEBBEBB78, registers=0xEBBEA7E0, ib=0xEBBEC068
+ rx ring entries=32, tx ring entries=64
+ rxring=0xEBBEC0B0, rxr shadow=0xEBBEC2E0, rx_head=25, rx_tail=0
+ txring=0xEBBEC390, txr shadow=0xEBBEC7C0, tx_head=32, tx_tail=32, tx_count=0
+ running=1, port id=0xC957490
+ Software MAC address filter(hash:length/addr/mask/hits):
+  0xC0:  0  0100.0ccc.cccc  0000.0000.0000         0
+  0xC5:  0  0180.c200.0007  0000.0000.0000         0
+ spurious_idon=0, filtered_pak=0, throttled=0, enabled=0, disabled=0
+ rx_framing_err=0, rx_overflow_err=0, rx_buffer_err=0
+ rx_bpe_err=0, rx_soft_overflow_err=0, rx_no_enp=0, rx_discard=0
+ tx_one_col_err=0, tx_more_col_err=0, tx_no_enp=0, tx_deferred_err=0
+ tx_underrun_err=0, tx_late_collision_err=0, tx_loss_carrier_err=0
+ tx_exc_collision_err=12136, tx_buff_err=0, fatal_tx_err=0
+ hsrp_conf=0, need_af_check=0
+ tx_limited=0(64)
+
+Interface Ethernet2/0
+Hardware is AMD Unknown
+ADDR: EBBFCEB0, FASTSEND: 8350F20, MCI_INDEX: 0
+DIST ROUTE ENABLED: 0
+Route Cache Flag: 11
+ amdp2_instance=0xEBBFE1F8, registers=0xEBBFCE60, ib=0xEBBFE6E8
+ rx ring entries=32, tx ring entries=64
+ rxring=0xEBBFE730, rxr shadow=0xEBBFE960, rx_head=0, rx_tail=0
+ txring=0xEBBFEA10, txr shadow=0xEBBFEE40, tx_head=13, tx_tail=13, tx_count=0
+ running=1, port id=0xC9574E8
+ Software MAC address filter(hash:length/addr/mask/hits):
+  0xC0:  0  0100.0ccc.cccc  0000.0000.0000         0
+  0xC5:  0  0180.c200.0007  0000.0000.0000         0
+ spurious_idon=0, filtered_pak=0, throttled=0, enabled=0, disabled=0
+ rx_framing_err=0, rx_overflow_err=0, rx_buffer_err=0
+ rx_bpe_err=0, rx_soft_overflow_err=0, rx_no_enp=0, rx_discard=0
+ tx_one_col_err=0, tx_more_col_err=0, tx_no_enp=0, tx_deferred_err=0
+ tx_underrun_err=0, tx_late_collision_err=0, tx_loss_carrier_err=0
+ tx_exc_collision_err=2236, tx_buff_err=0, fatal_tx_err=0
+ hsrp_conf=0, need_af_check=0
+ tx_limited=0(64)
+
+Interface Ethernet2/1
+Hardware is AMD Unknown
+ADDR: EBC102E0, FASTSEND: 8350F20, MCI_INDEX: 0
+DIST ROUTE ENABLED: 0
+Route Cache Flag: 11
+ amdp2_instance=0xEBC11628, registers=0xEBC10290, ib=0xEBC11B18
+ rx ring entries=32, tx ring entries=64
+ rxring=0xEBC11B60, rxr shadow=0xEBC11D90, rx_head=0, rx_tail=0
+ txring=0xEBC11E40, txr shadow=0xEBC12270, tx_head=15, tx_tail=15, tx_count=0
+ running=1, port id=0xC957540
+ Software MAC address filter(hash:length/addr/mask/hits):
+  0xC0:  0  0100.0ccc.cccc  0000.0000.0000         0
+  0xC5:  0  0180.c200.0007  0000.0000.0000         0
+ spurious_idon=0, filtered_pak=0, throttled=0, enabled=0, disabled=0
+ rx_framing_err=0, rx_overflow_err=0, rx_buffer_err=0
+ rx_bpe_err=0, rx_soft_overflow_err=0, rx_no_enp=0, rx_discard=0
+ tx_one_col_err=0, tx_more_col_err=0, tx_no_enp=0, tx_deferred_err=0
+ tx_underrun_err=0, tx_late_collision_err=0, tx_loss_carrier_err=0
+ tx_exc_collision_err=12124, tx_buff_err=0, fatal_tx_err=0
+ hsrp_conf=0, need_af_check=0
+ tx_limited=0(64)
+
+Interface Ethernet2/2
+Hardware is AMD Unknown
+ADDR: EBC229B0, FASTSEND: 8350F20, MCI_INDEX: 0
+DIST ROUTE ENABLED: 0
+Route Cache Flag: 11
+ amdp2_instance=0xEBC23CF8, registers=0xEBC22960, ib=0xEBC241E8
+ rx ring entries=32, tx ring entries=64
+ rxring=0xEBC24230, rxr shadow=0xEBC24460, rx_head=0, rx_tail=0
+ txring=0xEBC24510, txr shadow=0xEBC24940, tx_head=15, tx_tail=15, tx_count=0
+ running=1, port id=0xC957598
+ Software MAC address filter(hash:length/addr/mask/hits):
+  0xC0:  0  0100.0ccc.cccc  0000.0000.0000         0
+  0xC5:  0  0180.c200.0007  0000.0000.0000         0
+ spurious_idon=0, filtered_pak=0, throttled=0, enabled=0, disabled=0
+ rx_framing_err=0, rx_overflow_err=0, rx_buffer_err=0
+ rx_bpe_err=0, rx_soft_overflow_err=0, rx_no_enp=0, rx_discard=0
+ tx_one_col_err=0, tx_more_col_err=0, tx_no_enp=0, tx_deferred_err=0
+ tx_underrun_err=0, tx_late_collision_err=0, tx_loss_carrier_err=0
+ tx_exc_collision_err=12103, tx_buff_err=0, fatal_tx_err=0
+ hsrp_conf=0, need_af_check=0
+ tx_limited=0(64)
+
+Interface Ethernet2/3
+Hardware is AMD Unknown
+ADDR: EBC35030, FASTSEND: 8350F20, MCI_INDEX: 0
+DIST ROUTE ENABLED: 0
+Route Cache Flag: 11
+ amdp2_instance=0xEBC36378, registers=0xEBC34FE0, ib=0xEBC36868
+ rx ring entries=32, tx ring entries=64
+ rxring=0xEBC368B0, rxr shadow=0xEBC36AE0, rx_head=0, rx_tail=0
+ txring=0xEBC36B90, txr shadow=0xEBC36FC0, tx_head=15, tx_tail=15, tx_count=0
+ running=1, port id=0xC9575F0
+ Software MAC address filter(hash:length/addr/mask/hits):
+  0xC0:  0  0100.0ccc.cccc  0000.0000.0000         0
+  0xC5:  0  0180.c200.0007  0000.0000.0000         0
+ spurious_idon=0, filtered_pak=0, throttled=0, enabled=0, disabled=0
+ rx_framing_err=0, rx_overflow_err=0, rx_buffer_err=0
+ rx_bpe_err=0, rx_soft_overflow_err=0, rx_no_enp=0, rx_discard=0
+ tx_one_col_err=0, tx_more_col_err=0, tx_no_enp=0, tx_deferred_err=0
+ tx_underrun_err=0, tx_late_collision_err=0, tx_loss_carrier_err=0
+ tx_exc_collision_err=12105, tx_buff_err=0, fatal_tx_err=0
+ hsrp_conf=0, need_af_check=0
+ tx_limited=0(64)
+
+Interface Ethernet3/0
+Hardware is AMD Unknown
+ADDR: EBC48460, FASTSEND: 8350F20, MCI_INDEX: 0
+DIST ROUTE ENABLED: 0
+Route Cache Flag: 11
+ amdp2_instance=0xEBC497A8, registers=0xEBC48410, ib=0xEBC49C98
+ rx ring entries=32, tx ring entries=64
+ rxring=0xEBC49CE0, rxr shadow=0xEBC49F10, rx_head=0, rx_tail=0
+ txring=0xEBC49FC0, txr shadow=0xEBC4A3F0, tx_head=13, tx_tail=13, tx_count=0
+ running=1, port id=0xC957648
+ Software MAC address filter(hash:length/addr/mask/hits):
+  0xC0:  0  0100.0ccc.cccc  0000.0000.0000         0
+  0xC5:  0  0180.c200.0007  0000.0000.0000         0
+ spurious_idon=0, filtered_pak=0, throttled=0, enabled=0, disabled=0
+ rx_framing_err=0, rx_overflow_err=0, rx_buffer_err=0
+ rx_bpe_err=0, rx_soft_overflow_err=0, rx_no_enp=0, rx_discard=0
+ tx_one_col_err=0, tx_more_col_err=0, tx_no_enp=0, tx_deferred_err=0
+ tx_underrun_err=0, tx_late_collision_err=0, tx_loss_carrier_err=0
+ tx_exc_collision_err=2418, tx_buff_err=0, fatal_tx_err=0
+ hsrp_conf=0, need_af_check=0
+ tx_limited=0(64)
+
+Interface Ethernet3/1
+Hardware is AMD Unknown
+ADDR: EBC5AB30, FASTSEND: 8350F20, MCI_INDEX: 0
+DIST ROUTE ENABLED: 0
+Route Cache Flag: 11
+ amdp2_instance=0xEBC5BE78, registers=0xEBC5AAE0, ib=0xEBC5C368
+ rx ring entries=32, tx ring entries=64
+ rxring=0xEBC5C3B0, rxr shadow=0xEBC5C5E0, rx_head=0, rx_tail=0
+ txring=0xEBC5C690, txr shadow=0xEBC5CAC0, tx_head=13, tx_tail=13, tx_count=0
+ running=1, port id=0xC9576A0
+ Software MAC address filter(hash:length/addr/mask/hits):
+  0xC0:  0  0100.0ccc.cccc  0000.0000.0000         0
+  0xC5:  0  0180.c200.0007  0000.0000.0000         0
+ spurious_idon=0, filtered_pak=0, throttled=0, enabled=0, disabled=0
+ rx_framing_err=0, rx_overflow_err=0, rx_buffer_err=0
+ rx_bpe_err=0, rx_soft_overflow_err=0, rx_no_enp=0, rx_discard=0
+ tx_one_col_err=0, tx_more_col_err=0, tx_no_enp=0, tx_deferred_err=0
+ tx_underrun_err=0, tx_late_collision_err=0, tx_loss_carrier_err=0
+ tx_exc_collision_err=2473, tx_buff_err=0, fatal_tx_err=0
+ hsrp_conf=0, need_af_check=0
+ tx_limited=0(64)
+
+Interface Ethernet3/2
+Hardware is AMD Unknown
+ADDR: EBC6D1B0, FASTSEND: 8350F20, MCI_INDEX: 0
+DIST ROUTE ENABLED: 0
+Route Cache Flag: 11
+ amdp2_instance=0xEBC6E4F8, registers=0xEBC6D160, ib=0xEBC6E9E8
+ rx ring entries=32, tx ring entries=64
+ rxring=0xEBC6EA30, rxr shadow=0xEBC6EC60, rx_head=0, rx_tail=0
+ txring=0xEBC6ED10, txr shadow=0xEBC6F140, tx_head=13, tx_tail=13, tx_count=0
+ running=1, port id=0xC9576F8
+ Software MAC address filter(hash:length/addr/mask/hits):
+  0xC0:  0  0100.0ccc.cccc  0000.0000.0000         0
+  0xC5:  0  0180.c200.0007  0000.0000.0000         0
+ spurious_idon=0, filtered_pak=0, throttled=0, enabled=0, disabled=0
+ rx_framing_err=0, rx_overflow_err=0, rx_buffer_err=0
+ rx_bpe_err=0, rx_soft_overflow_err=0, rx_no_enp=0, rx_discard=0
+ tx_one_col_err=0, tx_more_col_err=0, tx_no_enp=0, tx_deferred_err=0
+ tx_underrun_err=0, tx_late_collision_err=0, tx_loss_carrier_err=0
+ tx_exc_collision_err=2518, tx_buff_err=0, fatal_tx_err=0
+ hsrp_conf=0, need_af_check=0
+ tx_limited=0(64)
+
+Interface Ethernet3/3
+Hardware is AMD Unknown
+ADDR: EBC805E0, FASTSEND: 8350F20, MCI_INDEX: 0
+DIST ROUTE ENABLED: 0
+Route Cache Flag: 11
+ amdp2_instance=0xEBC81928, registers=0xEBC80590, ib=0xEBC81E18
+ rx ring entries=32, tx ring entries=64
+ rxring=0xEBC81E60, rxr shadow=0xEBC82090, rx_head=0, rx_tail=0
+ txring=0xEBC82140, txr shadow=0xEBC82570, tx_head=13, tx_tail=13, tx_count=0
+ running=1, port id=0xC957750
+ Software MAC address filter(hash:length/addr/mask/hits):
+  0xC0:  0  0100.0ccc.cccc  0000.0000.0000         0
+  0xC5:  0  0180.c200.0007  0000.0000.0000         0
+ spurious_idon=0, filtered_pak=0, throttled=0, enabled=0, disabled=0
+ rx_framing_err=0, rx_overflow_err=0, rx_buffer_err=0
+ rx_bpe_err=0, rx_soft_overflow_err=0, rx_no_enp=0, rx_discard=0
+ tx_one_col_err=0, tx_more_col_err=0, tx_no_enp=0, tx_deferred_err=0
+ tx_underrun_err=0, tx_late_collision_err=0, tx_loss_carrier_err=0
+ tx_exc_collision_err=2727, tx_buff_err=0, fatal_tx_err=0
+ hsrp_conf=0, need_af_check=0
+ tx_limited=0(64)
+
+IOU1#

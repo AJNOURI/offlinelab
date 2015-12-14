@@ -1,0 +1,8 @@
+sh adjacency
+Protocol Interface                 Address
+IP       Ethernet0/0               192.168.13.100(16)
+IP       Ethernet1/3               192.168.0.121(7)
+IP       Tunnel0                   172.16.20.2(5) (incomplete)
+IP       Tunnel0                   172.16.40.4(11)
+IP       Tunnel0                   172.16.50.5(5) (incomplete)
+IOU3#

@@ -1,0 +1,15 @@
+sh ip eigrp traffic
+EIGRP-IPv4 Traffic Statistics for AS(666)
+  Hellos sent/received: 70943/35624
+  Updates sent/received: 13/19
+  Queries sent/received: 2/3
+  Replies sent/received: 2/2
+  Acks sent/received: 18/13
+  SIA-Queries sent/received: 0/0
+  SIA-Replies sent/received: 0/0
+  Hello Process ID: 245
+  PDM Process ID: 199
+  Socket Queue: 0/10000/1/0 (current/max/highest/drops)
+  Input Queue: 0/2000/1/0 (current/max/highest/drops)
+
+IOU5#

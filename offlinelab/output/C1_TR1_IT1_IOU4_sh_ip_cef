@@ -1,0 +1,39 @@
+sh ip cef
+Prefix               Next Hop             Interface
+0.0.0.0/0            192.168.14.100       Ethernet0/0
+0.0.0.0/8            drop
+0.0.0.0/32           receive              
+4.4.4.4/32           receive              Loopback1
+20.0.0.0/24          172.16.20.2          Tunnel0
+30.0.0.0/24          172.16.30.3          Tunnel0
+40.0.0.0/24          attached             Ethernet0/1
+40.0.0.0/32          receive              Ethernet0/1
+40.0.0.100/32        receive              Ethernet0/1
+40.0.0.255/32        receive              Ethernet0/1
+50.0.0.0/24          172.16.50.5          Tunnel0
+127.0.0.0/8          drop
+172.16.0.0/12        attached             Tunnel0
+172.16.0.0/32        receive              Tunnel0
+172.16.20.2/32       attached             Tunnel0
+172.16.30.3/32       attached             Tunnel0
+172.16.40.4/32       receive              Tunnel0
+172.16.50.5/32       attached             Tunnel0
+172.31.255.255/32    receive              Tunnel0
+192.168.0.0/24       attached             Ethernet1/3
+192.168.0.0/32       receive              Ethernet1/3
+192.168.0.121/32     attached             Ethernet1/3
+192.168.0.204/32     receive              Ethernet1/3
+192.168.0.255/32     receive              Ethernet1/3
+192.168.12.2/32      192.168.14.100       Ethernet0/0
+192.168.13.3/32      192.168.14.100       Ethernet0/0
+192.168.14.0/24      attached             Ethernet0/0
+192.168.14.0/32      receive              Ethernet0/0
+192.168.14.4/32      receive              Ethernet0/0
+192.168.14.100/32    attached             Ethernet0/0
+192.168.14.255/32    receive              Ethernet0/0
+192.168.15.5/32      192.168.14.100       Ethernet0/0
+224.0.0.0/4          drop
+224.0.0.0/24         receive              
+240.0.0.0/4          drop
+255.255.255.255/32   receive              
+IOU4#

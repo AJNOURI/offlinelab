@@ -2,9 +2,9 @@
 import yaml
 import paramiko
 import logging
-from xml.dom.minidom import Document
 import time
 import sys
+import os
 
 
 logger = logging.getLogger(__name__)
@@ -19,11 +19,13 @@ class connect(object):
         self.iteration = iteration
         self.tout = tout
         self.manualresult = []
+        self.MAXBYTES = 999999
+        self.outlist = []
 
         try:
             stream = open(cmdfile)
             self.rdata = yaml.load(stream)
-            logging.debug('\n\n\n### Reading CMD list from YAML file: ' + cmdfile)
+            logger.debug('\n\n\n### Reading CMD list from YAML file: ' + cmdfile)
             self.cmdlist = []
             if self.rdata:
                 for key, value in self.rdata.iteritems():
@@ -34,7 +36,6 @@ class connect(object):
 
                     #logging.debug('device: ' + value[0]['ip'])
                     self.device = value[0]['device']
-
 
                     #logging.debug('ip: ' + value[1]['ip'])
                     self.ip = value[1]['ip']
@@ -53,35 +54,32 @@ class connect(object):
                         #print cmd
                         self.cmdlist.append(cmd)
             else:
-                    logging.debug('File ',cmdfile,' is empty')
+                    logger.debug('File ',cmdfile,' is empty')
         except IOError:
-            logging.error('File ',cmdfile,' NOT found')
+            logger.error('File %s NOT found: ',cmdfile)
             sys.exit(0)
-        
-        
-        self.MAXBYTES = 999999
-        self.outlist = []
+            
         try:
             self.sshobj = paramiko.SSHClient()
             self.sshobj.set_missing_host_key_policy(paramiko.AutoAddPolicy())
             self.sshobj.connect(self.ip, username=self.login, password=self.passwd)
             self.sshobj.set_missing_host_key_policy(paramiko.AutoAddPolicy())
             self.channel = self.sshobj.invoke_shell()
-        
-        except Exception,e:
-            logging.error('Paramiko init exception: %s',str(e))
-            sys.exit(0)            
 
-            
+        except Exception,e:
+            logger.error('Paramiko exception: %s',str(e))
+            sys.exit(0)         
+        
+       
     def paraSsh(self):
         if self.rdata:
-
-
+    
+            
             self.channel.send('en\n')
             time.sleep(1)
             resp = self.channel.recv(self.MAXBYTES)
             
-            logging.debug(' ========> Device type: ', (self.device.lower() == 'cisco'))
+            logger.debug(' ========> Device type: ', (self.device.lower() == 'cisco'))
 
             if (self.enpasswd):
                     logging.debug('========> Set terminal length')
@@ -89,7 +87,7 @@ class connect(object):
                     self.channel.send(self.enpasswd + '\n')
                     time.sleep(1)
                     resp = self.channel.recv(MAXBYTES)
-                    logging.debug(' Result of password: ', resp)
+                    logger.debug(' Result of password: ', resp)
 
                     
             if (self.device.lower() == 'cisco'):
@@ -97,7 +95,7 @@ class connect(object):
                     self.channel.send('terminal length 0\n')
                     time.sleep(1)
                     resp = self.channel.recv(self.MAXBYTES)
-                    logging.debug(' Result of terminal length 0: ', resp)
+                    logger.debug(' Result of terminal length 0: ', resp)
 
                     
             for cmdi in self.cmdlist:
@@ -114,16 +112,17 @@ class connect(object):
                     filename = 'C' + str(self.ci) + '_TR' + str(self.testrun) + '_IT'\
                             + str(self.iteration) + '_' + self.hostname + '_' + precommand
                     filename = filename.replace(' ', '_')
+                    filename = os.path.join(os.path.dirname('__file__'), './output', filename)
 
                     with open(filename, 'w') as file_out:
                         file_out.write(cmdoutput)
                     file_out.close()
-                    logging.info('paraSsh: %s  DONE Output File ==> %s',str(cmdi), str(filename))
+                    logger.info('paraSsh: %s  DONE Output File ==> %s',str(cmdi), str(filename))
                     self.outlist.append({filename:cmdi})
                 else:
                     self.manualresult.append(cmdoutput)
 
-                logging.debug(cmdi, ': Sent successfully')
+                logger.debug(cmdi, ': Sent successfully')
 
             if self.device.lower() == 'cisco':
                 self.channel.send('do no terminal pager 0\n')

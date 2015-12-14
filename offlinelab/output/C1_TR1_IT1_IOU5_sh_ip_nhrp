@@ -1,0 +1,6 @@
+sh ip nhrp
+172.16.40.4/32 via 172.16.40.4
+   Tunnel0 created 1d21h, never expire 
+   Type: static, Flags: used 
+   NBMA address: 192.168.14.4 
+IOU5#

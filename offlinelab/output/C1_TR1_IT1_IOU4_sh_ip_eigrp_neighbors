@@ -1,0 +1,8 @@
+sh ip eigrp neighbors
+EIGRP-IPv4 Neighbors for AS(666)
+H   Address                 Interface              Hold Uptime   SRTT   RTO  Q  Seq
+                                                   (sec)         (ms)       Cnt Num
+2   172.16.20.2             Tu0                      12 1d21h      17  1398  0  18
+1   172.16.50.5             Tu0                      10 1d21h      16  1398  0  17
+0   172.16.30.3             Tu0                      11 1d21h       9  1398  0  18
+IOU4#

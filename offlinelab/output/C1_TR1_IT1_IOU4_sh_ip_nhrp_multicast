@@ -1,0 +1,6 @@
+sh ip nhrp multicast
+  I/F     NBMA address  
+Tunnel0    192.168.12.2    Flags: dynamic
+Tunnel0    192.168.15.5    Flags: dynamic
+Tunnel0    192.168.13.3    Flags: dynamic
+IOU4#

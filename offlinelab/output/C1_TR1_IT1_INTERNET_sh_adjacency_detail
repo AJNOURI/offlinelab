@@ -1,0 +1,38 @@
+sh adjacency detail
+Protocol Interface                 Address
+IP       Ethernet0/0               192.168.14.4(7)
+                                   108295 packets, 20184314 bytes
+                                   epoch 0
+                                   sourced in sev-epoch 0
+                                   Encap length 14
+                                   AABBCC000300AABBCC0004000800
+                                   ARP
+IP       Ethernet0/1               192.168.15.5(7)
+                                   36172 packets, 6746656 bytes
+                                   epoch 0
+                                   sourced in sev-epoch 0
+                                   Encap length 14
+                                   AABBCC000600AABBCC0004100800
+                                   ARP
+IP       Ethernet0/3               192.168.13.3(7)
+                                   36149 packets, 6740126 bytes
+                                   epoch 0
+                                   sourced in sev-epoch 0
+                                   Encap length 14
+                                   AABBCC000100AABBCC0004300800
+                                   ARP
+IP       Ethernet1/0               192.168.12.2(7)
+                                   36296 packets, 6771356 bytes
+                                   epoch 0
+                                   sourced in sev-epoch 0
+                                   Encap length 14
+                                   AABBCC000500AABBCC0004010800
+                                   ARP
+IP       Ethernet3/3               192.168.0.121(7)
+                                   0 packets, 0 bytes
+                                   epoch 0
+                                   sourced in sev-epoch 0
+                                   Encap length 14
+                                   001F16F4298BAABBCC0004330800
+                                   ARP
+internet#

@@ -1,0 +1,11 @@
+sh ip eigrp neighbors detail
+EIGRP-IPv4 Neighbors for AS(666)
+H   Address                 Interface              Hold Uptime   SRTT   RTO  Q  Seq
+                                                   (sec)         (ms)       Cnt Num
+0   172.16.40.4             Tu0                      11 1d21h      58  1398  0  32
+   Version 9.0/2.0, Retrans: 0, Retries: 0, Prefixes: 4
+   Topology-ids from peer - 0 
+
+BFD sessions
+ NeighAddr         Interface
+IOU5#

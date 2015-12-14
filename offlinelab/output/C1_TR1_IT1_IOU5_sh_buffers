@@ -1,0 +1,189 @@
+sh buffers
+Buffer elements:
+     1083 in free list 
+     218537 hits, 0 misses, 618 created
+
+Public buffer pools:
+Small buffers, 104 bytes (total 120, permanent 120):
+     116 in free list (20 min, 250 max allowed)
+     352621 hits, 0 misses, 0 trims, 0 created
+     0 failures (0 no memory)
+Middle buffers, 600 bytes (total 90, permanent 90):
+     89 in free list (10 min, 200 max allowed)
+     356993 hits, 0 misses, 0 trims, 0 created
+     0 failures (0 no memory)
+Big buffers, 1536 bytes (total 90, permanent 90, peak 91 @ 1d21h):
+     90 in free list (5 min, 300 max allowed)
+     52804 hits, 0 misses, 1 trims, 1 created
+     0 failures (0 no memory)
+VeryBig buffers, 4520 bytes (total 10, permanent 10, peak 11 @ 1d21h):
+     10 in free list (0 min, 300 max allowed)
+     0 hits, 0 misses, 1 trims, 1 created
+     0 failures (0 no memory)
+Large buffers, 5024 bytes (total 10, permanent 10, peak 11 @ 1d21h):
+     10 in free list (0 min, 30 max allowed)
+     0 hits, 0 misses, 1 trims, 1 created
+     0 failures (0 no memory)
+Huge buffers, 18024 bytes (total 1, permanent 0, peak 1 @ 1d21h):
+     1 in free list (0 min, 13 max allowed)
+     0 hits, 0 misses, 17 trims, 18 created
+     0 failures (0 no memory)
+
+Interface buffer pools:
+CF Small buffers, 104 bytes (total 101, permanent 100, peak 101 @ 1d21h):
+     101 in free list (100 min, 200 max allowed)
+     0 hits, 0 misses, 17 trims, 18 created
+     0 failures (0 no memory)
+CF Middle buffers, 600 bytes (total 101, permanent 100, peak 101 @ 1d21h):
+     101 in free list (100 min, 200 max allowed)
+     0 hits, 0 misses, 17 trims, 18 created
+     0 failures (0 no memory)
+Syslog ED Pool buffers, 600 bytes (total 133, permanent 132, peak 133 @ 1d21h):
+     101 in free list (132 min, 132 max allowed)
+     71 hits, 0 misses
+CF Big buffers, 1536 bytes (total 26, permanent 25, peak 26 @ 1d21h):
+     26 in free list (25 min, 50 max allowed)
+     0 hits, 0 misses, 17 trims, 18 created
+     0 failures (0 no memory)
+IPC buffers, 4096 bytes (total 2, permanent 2):
+     1 in free list (1 min, 8 max allowed)
+     1 hits, 0 fallbacks, 0 trims, 0 created
+     0 failures (0 no memory)
+CF VeryBig buffers, 4520 bytes (total 3, permanent 2, peak 3 @ 1d21h):
+     3 in free list (2 min, 4 max allowed)
+     0 hits, 0 misses, 17 trims, 18 created
+     0 failures (0 no memory)
+CF Large buffers, 5024 bytes (total 2, permanent 1, peak 2 @ 1d21h):
+     2 in free list (1 min, 2 max allowed)
+     0 hits, 0 misses, 17 trims, 18 created
+     0 failures (0 no memory)
+IPC Medium buffers, 16384 bytes (total 2, permanent 2):
+     2 in free list (1 min, 8 max allowed)
+     0 hits, 0 fallbacks, 0 trims, 0 created
+     0 failures (0 no memory)
+IPC Large buffers, 65535 bytes (total 17, permanent 16, peak 17 @ 1d21h):
+     17 in free list (16 min, 16 max allowed)
+     0 hits, 0 misses, 2751 trims, 2752 created
+     0 failures (0 no memory)
+
+Header pools:
+Header buffers, 0 bytes (total 266, permanent 256, peak 266 @ 1d21h):
+     10 in free list (10 min, 512 max allowed)
+     253 hits, 3 misses, 0 trims, 10 created
+     0 failures (0 no memory)
+     256 max cache size, 256 in cache
+     0 hits in cache, 0 misses in cache
+
+Particle Clones:
+     1024 clones, 0 hits, 0 misses
+
+Public particle pools:
+F/S buffers, 256 bytes (total 384, permanent 384):
+     128 in free list (128 min, 1024 max allowed)
+     256 hits, 0 misses, 0 trims, 0 created
+     0 failures (0 no memory)
+     256 max cache size, 256 in cache
+     35976 hits in cache, 0 misses in cache
+Normal buffers, 512 bytes (total 512, permanent 512):
+     384 in free list (128 min, 1024 max allowed)
+     128 hits, 0 misses, 0 trims, 0 created
+     0 failures (0 no memory)
+     128 max cache size, 128 in cache
+     0 hits in cache, 0 misses in cache
+
+Private particle pools:
+HQF Particle buffers, 0 bytes (total 2000, permanent 2000):
+     2000 in free list (500 min, 2000 max allowed)
+     0 hits, 0 misses, 0 trims, 0 created
+     0 failures (0 no memory)
+Ethernet0/0 buffers, 512 bytes (total 96, permanent 96):
+     0 in free list (0 min, 96 max allowed)
+     96 hits, 0 fallbacks
+     96 max cache size, 64 in cache
+     39638 hits in cache, 0 misses in cache
+Ethernet0/1 buffers, 512 bytes (total 96, permanent 96):
+     0 in free list (0 min, 96 max allowed)
+     96 hits, 0 fallbacks
+     96 max cache size, 64 in cache
+     32 hits in cache, 0 misses in cache
+Ethernet0/2 buffers, 512 bytes (total 96, permanent 96):
+     0 in free list (0 min, 96 max allowed)
+     96 hits, 0 fallbacks
+     96 max cache size, 64 in cache
+     32 hits in cache, 0 misses in cache
+Ethernet0/3 buffers, 512 bytes (total 96, permanent 96):
+     0 in free list (0 min, 96 max allowed)
+     96 hits, 0 fallbacks
+     96 max cache size, 64 in cache
+     32 hits in cache, 0 misses in cache
+Ethernet1/0 buffers, 512 bytes (total 96, permanent 96):
+     0 in free list (0 min, 96 max allowed)
+     96 hits, 0 fallbacks
+     96 max cache size, 64 in cache
+     32 hits in cache, 0 misses in cache
+Ethernet1/1 buffers, 512 bytes (total 96, permanent 96):
+     0 in free list (0 min, 96 max allowed)
+     96 hits, 0 fallbacks
+     96 max cache size, 64 in cache
+     32 hits in cache, 0 misses in cache
+Ethernet1/2 buffers, 512 bytes (total 96, permanent 96):
+     0 in free list (0 min, 96 max allowed)
+     96 hits, 0 fallbacks
+     96 max cache size, 64 in cache
+     32 hits in cache, 0 misses in cache
+Ethernet1/3 buffers, 512 bytes (total 96, permanent 96):
+     0 in free list (0 min, 96 max allowed)
+     96 hits, 0 fallbacks
+     96 max cache size, 64 in cache
+     195295 hits in cache, 0 misses in cache
+Serial2/0 buffers, 512 bytes (total 120, permanent 120):
+     0 in free list (0 min, 120 max allowed)
+     120 hits, 0 fallbacks
+     120 max cache size, 42 in cache
+     78 hits in cache, 0 misses in cache
+     10 buffer threshold, 0 threshold transitions
+Serial2/1 buffers, 512 bytes (total 120, permanent 120):
+     0 in free list (0 min, 120 max allowed)
+     120 hits, 0 fallbacks
+     120 max cache size, 42 in cache
+     78 hits in cache, 0 misses in cache
+     10 buffer threshold, 0 threshold transitions
+Serial2/2 buffers, 512 bytes (total 120, permanent 120):
+     0 in free list (0 min, 120 max allowed)
+     120 hits, 0 fallbacks
+     120 max cache size, 42 in cache
+     78 hits in cache, 0 misses in cache
+     10 buffer threshold, 0 threshold transitions
+Serial2/3 buffers, 512 bytes (total 120, permanent 120):
+     0 in free list (0 min, 120 max allowed)
+     120 hits, 0 fallbacks
+     120 max cache size, 42 in cache
+     78 hits in cache, 0 misses in cache
+     10 buffer threshold, 0 threshold transitions
+Serial3/0 buffers, 512 bytes (total 120, permanent 120):
+     0 in free list (0 min, 120 max allowed)
+     120 hits, 0 fallbacks
+     120 max cache size, 42 in cache
+     78 hits in cache, 0 misses in cache
+     10 buffer threshold, 0 threshold transitions
+Serial3/1 buffers, 512 bytes (total 120, permanent 120):
+     0 in free list (0 min, 120 max allowed)
+     120 hits, 0 fallbacks
+     120 max cache size, 42 in cache
+     78 hits in cache, 0 misses in cache
+     10 buffer threshold, 0 threshold transitions
+Serial3/2 buffers, 512 bytes (total 120, permanent 120):
+     0 in free list (0 min, 120 max allowed)
+     120 hits, 0 fallbacks
+     120 max cache size, 42 in cache
+     78 hits in cache, 0 misses in cache
+     10 buffer threshold, 0 threshold transitions
+Serial3/3 buffers, 512 bytes (total 120, permanent 120):
+     0 in free list (0 min, 120 max allowed)
+     120 hits, 0 fallbacks
+     120 max cache size, 42 in cache
+     78 hits in cache, 0 misses in cache
+     10 buffer threshold, 0 threshold transitions
+
+
+IOU5#

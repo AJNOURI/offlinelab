@@ -1,0 +1,386 @@
+sh controllers
+Interface Ethernet0/0
+Hardware is AMD Unknown
+ADDR: F07DC398, FASTSEND: 804DD46, MCI_INDEX: 0
+DIST ROUTE ENABLED: 0
+Route Cache Flag: 11
+ amdp2_instance=0xF07DD6A8, registers=0xF07DC340, ib=0xF07FDB20
+ rx ring entries=32, tx ring entries=64
+ rxring=0xF07FDB70, rxr shadow=0xF07FDDA8, rx_head=21, rx_tail=0
+ txring=0xF07FDE60, txr shadow=0xF07FE298, tx_head=26, tx_tail=26, tx_count=0
+ running=1, port id=0x11298E68
+ Software MAC address filter(hash:length/addr/mask/hits):
+  0xC0:  0  0100.0ccc.cccc  0000.0000.0000         0
+  0xC0:  1  0180.c200.0002  0000.0000.0000         0
+  0xC5:  0  0180.c200.0007  0000.0000.0000         0
+  0xCC:  0  0180.c200.000e  0000.0000.0000         0
+ spurious_idon=0, filtered_pak=0, throttled=0, enabled=0, disabled=0
+ rx_framing_err=0, rx_overflow_err=0, rx_buffer_err=0
+ rx_bpe_err=0, rx_soft_overflow_err=0, rx_no_enp=0, rx_discard=0
+ tx_one_col_err=0, tx_more_col_err=0, tx_no_enp=0, tx_deferred_err=0
+ tx_underrun_err=0, tx_late_collision_err=0, tx_loss_carrier_err=0
+ tx_exc_collision_err=0, tx_buff_err=0, fatal_tx_err=0
+ hsrp_conf=0, need_af_check=0
+ tx_limited=0(64)
+
+Interface Ethernet0/1
+Hardware is AMD Unknown
+ADDR: F080EA50, FASTSEND: 804DD46, MCI_INDEX: 0
+DIST ROUTE ENABLED: 0
+Route Cache Flag: 11
+ amdp2_instance=0xF080FD60, registers=0xF080E9F8, ib=0xF0810168
+ rx ring entries=32, tx ring entries=64
+ rxring=0xF08101B8, rxr shadow=0xF08103F0, rx_head=26, rx_tail=0
+ txring=0xF08104A8, txr shadow=0xF08108E0, tx_head=28, tx_tail=28, tx_count=0
+ running=1, port id=0x11298EC0
+ Software MAC address filter(hash:length/addr/mask/hits):
+  0xC0:  0  0100.0ccc.cccc  0000.0000.0000         0
+  0xC0:  1  0180.c200.0002  0000.0000.0000         0
+  0xC5:  0  0180.c200.0007  0000.0000.0000         0
+  0xCC:  0  0180.c200.000e  0000.0000.0000         0
+ spurious_idon=0, filtered_pak=0, throttled=0, enabled=0, disabled=0
+ rx_framing_err=0, rx_overflow_err=0, rx_buffer_err=0
+ rx_bpe_err=0, rx_soft_overflow_err=0, rx_no_enp=0, rx_discard=0
+ tx_one_col_err=0, tx_more_col_err=0, tx_no_enp=0, tx_deferred_err=0
+ tx_underrun_err=0, tx_late_collision_err=0, tx_loss_carrier_err=0
+ tx_exc_collision_err=0, tx_buff_err=0, fatal_tx_err=0
+ hsrp_conf=0, need_af_check=0
+ tx_limited=0(64)
+
+Interface Ethernet0/2
+Hardware is AMD Unknown
+ADDR: F0821090, FASTSEND: 804DD46, MCI_INDEX: 0
+DIST ROUTE ENABLED: 0
+Route Cache Flag: 11
+ amdp2_instance=0xF08223A0, registers=0xF0821038, ib=0xF08227A8
+ rx ring entries=32, tx ring entries=64
+ rxring=0xF08227F8, rxr shadow=0xF0822A30, rx_head=0, rx_tail=0
+ txring=0xF0822AE8, txr shadow=0xF0822F20, tx_head=6, tx_tail=6, tx_count=0
+ running=1, port id=0x11298F18
+ Software MAC address filter(hash:length/addr/mask/hits):
+  0xC0:  0  0100.0ccc.cccc  0000.0000.0000         0
+  0xC0:  1  0180.c200.0002  0000.0000.0000         0
+  0xC5:  0  0180.c200.0007  0000.0000.0000         0
+  0xCC:  0  0180.c200.000e  0000.0000.0000         0
+ spurious_idon=0, filtered_pak=0, throttled=0, enabled=0, disabled=0
+ rx_framing_err=0, rx_overflow_err=0, rx_buffer_err=0
+ rx_bpe_err=0, rx_soft_overflow_err=0, rx_no_enp=0, rx_discard=0
+ tx_one_col_err=0, tx_more_col_err=0, tx_no_enp=0, tx_deferred_err=0
+ tx_underrun_err=0, tx_late_collision_err=0, tx_loss_carrier_err=0
+ tx_exc_collision_err=0, tx_buff_err=0, fatal_tx_err=0
+ hsrp_conf=0, need_af_check=0
+ tx_limited=0(64)
+
+Interface Ethernet0/3
+Hardware is AMD Unknown
+ADDR: F0834B70, FASTSEND: 804DD46, MCI_INDEX: 0
+DIST ROUTE ENABLED: 0
+Route Cache Flag: 11
+ amdp2_instance=0xF0835E80, registers=0xF0834B18, ib=0xF0836288
+ rx ring entries=32, tx ring entries=64
+ rxring=0xF08362D8, rxr shadow=0xF0836510, rx_head=23, rx_tail=0
+ txring=0xF08365C8, txr shadow=0xF0836A00, tx_head=12, tx_tail=12, tx_count=0
+ running=1, port id=0x11298F70
+ Software MAC address filter(hash:length/addr/mask/hits):
+  0xC0:  0  0100.0ccc.cccc  0000.0000.0000         0
+  0xC0:  1  0180.c200.0002  0000.0000.0000         0
+  0xC5:  0  0180.c200.0007  0000.0000.0000         0
+  0xCC:  0  0180.c200.000e  0000.0000.0000         0
+ spurious_idon=0, filtered_pak=0, throttled=0, enabled=0, disabled=0
+ rx_framing_err=0, rx_overflow_err=0, rx_buffer_err=0
+ rx_bpe_err=0, rx_soft_overflow_err=0, rx_no_enp=0, rx_discard=0
+ tx_one_col_err=0, tx_more_col_err=0, tx_no_enp=0, tx_deferred_err=0
+ tx_underrun_err=0, tx_late_collision_err=0, tx_loss_carrier_err=0
+ tx_exc_collision_err=0, tx_buff_err=0, fatal_tx_err=0
+ hsrp_conf=0, need_af_check=0
+ tx_limited=0(64)
+
+Interface Ethernet1/0
+Hardware is AMD Unknown
+ADDR: F0847150, FASTSEND: 804DD46, MCI_INDEX: 0
+DIST ROUTE ENABLED: 0
+Route Cache Flag: 11
+ amdp2_instance=0xF0848460, registers=0xF08470F8, ib=0xF0848868
+ rx ring entries=32, tx ring entries=64
+ rxring=0xF08488B8, rxr shadow=0xF0848AF0, rx_head=15, rx_tail=0
+ txring=0xF0848BA8, txr shadow=0xF0848FE0, tx_head=38, tx_tail=38, tx_count=0
+ running=1, port id=0x11298FC8
+ Software MAC address filter(hash:length/addr/mask/hits):
+  0xC0:  0  0100.0ccc.cccc  0000.0000.0000         0
+  0xC0:  1  0180.c200.0002  0000.0000.0000         0
+  0xC5:  0  0180.c200.0007  0000.0000.0000         0
+  0xCC:  0  0180.c200.000e  0000.0000.0000         0
+ spurious_idon=0, filtered_pak=0, throttled=0, enabled=0, disabled=0
+ rx_framing_err=0, rx_overflow_err=0, rx_buffer_err=0
+ rx_bpe_err=0, rx_soft_overflow_err=0, rx_no_enp=0, rx_discard=0
+ tx_one_col_err=0, tx_more_col_err=0, tx_no_enp=0, tx_deferred_err=0
+ tx_underrun_err=0, tx_late_collision_err=0, tx_loss_carrier_err=0
+ tx_exc_collision_err=0, tx_buff_err=0, fatal_tx_err=0
+ hsrp_conf=0, need_af_check=0
+ tx_limited=0(64)
+
+Interface Ethernet1/1
+Hardware is AMD Unknown
+ADDR: F0859790, FASTSEND: 804DD46, MCI_INDEX: 0
+DIST ROUTE ENABLED: 0
+Route Cache Flag: 11
+ amdp2_instance=0xF085AAA0, registers=0xF0859738, ib=0xF085AEA8
+ rx ring entries=32, tx ring entries=64
+ rxring=0xF085AEF8, rxr shadow=0xF085B130, rx_head=0, rx_tail=0
+ txring=0xF085B1E8, txr shadow=0xF085B620, tx_head=4, tx_tail=4, tx_count=0
+ running=1, port id=0x11299020
+ Software MAC address filter(hash:length/addr/mask/hits):
+  0xC0:  0  0100.0ccc.cccc  0000.0000.0000         0
+  0xC0:  1  0180.c200.0002  0000.0000.0000         0
+  0xC5:  0  0180.c200.0007  0000.0000.0000         0
+  0xCC:  0  0180.c200.000e  0000.0000.0000         0
+ spurious_idon=0, filtered_pak=0, throttled=0, enabled=0, disabled=0
+ rx_framing_err=0, rx_overflow_err=0, rx_buffer_err=0
+ rx_bpe_err=0, rx_soft_overflow_err=0, rx_no_enp=0, rx_discard=0
+ tx_one_col_err=0, tx_more_col_err=0, tx_no_enp=0, tx_deferred_err=0
+ tx_underrun_err=0, tx_late_collision_err=0, tx_loss_carrier_err=0
+ tx_exc_collision_err=0, tx_buff_err=0, fatal_tx_err=0
+ hsrp_conf=0, need_af_check=0
+ tx_limited=0(64)
+
+Interface Ethernet1/2
+Hardware is AMD Unknown
+ADDR: F086D270, FASTSEND: 804DD46, MCI_INDEX: 0
+DIST ROUTE ENABLED: 0
+Route Cache Flag: 11
+ amdp2_instance=0xF086E580, registers=0xF086D218, ib=0xF086E988
+ rx ring entries=32, tx ring entries=64
+ rxring=0xF086E9D8, rxr shadow=0xF086EC10, rx_head=0, rx_tail=0
+ txring=0xF086ECC8, txr shadow=0xF086F100, tx_head=5, tx_tail=5, tx_count=0
+ running=1, port id=0x11299078
+ Software MAC address filter(hash:length/addr/mask/hits):
+  0xC0:  0  0100.0ccc.cccc  0000.0000.0000         0
+  0xC0:  1  0180.c200.0002  0000.0000.0000         0
+  0xC5:  0  0180.c200.0007  0000.0000.0000         0
+  0xCC:  0  0180.c200.000e  0000.0000.0000         0
+ spurious_idon=0, filtered_pak=0, throttled=0, enabled=0, disabled=0
+ rx_framing_err=0, rx_overflow_err=0, rx_buffer_err=0
+ rx_bpe_err=0, rx_soft_overflow_err=0, rx_no_enp=0, rx_discard=0
+ tx_one_col_err=0, tx_more_col_err=0, tx_no_enp=0, tx_deferred_err=0
+ tx_underrun_err=0, tx_late_collision_err=0, tx_loss_carrier_err=0
+ tx_exc_collision_err=0, tx_buff_err=0, fatal_tx_err=0
+ hsrp_conf=0, need_af_check=0
+ tx_limited=0(64)
+
+Interface Ethernet1/3
+Hardware is AMD Unknown
+ADDR: F087F850, FASTSEND: 804DD46, MCI_INDEX: 0
+DIST ROUTE ENABLED: 0
+Route Cache Flag: 11
+ amdp2_instance=0xF0880B60, registers=0xF087F7F8, ib=0xF0880F68
+ rx ring entries=32, tx ring entries=64
+ rxring=0xF0880FB8, rxr shadow=0xF08811F0, rx_head=0, rx_tail=0
+ txring=0xF08812A8, txr shadow=0xF08816E0, tx_head=4, tx_tail=4, tx_count=0
+ running=1, port id=0x112990D0
+ Software MAC address filter(hash:length/addr/mask/hits):
+  0xC0:  0  0100.0ccc.cccc  0000.0000.0000         0
+  0xC0:  1  0180.c200.0002  0000.0000.0000         0
+  0xC5:  0  0180.c200.0007  0000.0000.0000         0
+  0xCC:  0  0180.c200.000e  0000.0000.0000         0
+ spurious_idon=0, filtered_pak=0, throttled=0, enabled=0, disabled=0
+ rx_framing_err=0, rx_overflow_err=0, rx_buffer_err=0
+ rx_bpe_err=0, rx_soft_overflow_err=0, rx_no_enp=0, rx_discard=0
+ tx_one_col_err=0, tx_more_col_err=0, tx_no_enp=0, tx_deferred_err=0
+ tx_underrun_err=0, tx_late_collision_err=0, tx_loss_carrier_err=0
+ tx_exc_collision_err=0, tx_buff_err=0, fatal_tx_err=0
+ hsrp_conf=0, need_af_check=0
+ tx_limited=0(64)
+
+Interface Ethernet2/0
+Hardware is AMD Unknown
+ADDR: F0891E90, FASTSEND: 804DD46, MCI_INDEX: 0
+DIST ROUTE ENABLED: 0
+Route Cache Flag: 11
+ amdp2_instance=0xF08931A0, registers=0xF0891E38, ib=0xF08935A8
+ rx ring entries=32, tx ring entries=64
+ rxring=0xF08935F8, rxr shadow=0xF0893830, rx_head=0, rx_tail=0
+ txring=0xF08938E8, txr shadow=0xF0893D20, tx_head=9, tx_tail=9, tx_count=0
+ running=1, port id=0x11299128
+ Software MAC address filter(hash:length/addr/mask/hits):
+  0xC0:  0  0100.0ccc.cccc  0000.0000.0000         0
+  0xC0:  1  0180.c200.0002  0000.0000.0000         0
+  0xC5:  0  0180.c200.0007  0000.0000.0000         0
+  0xCC:  0  0180.c200.000e  0000.0000.0000         0
+ spurious_idon=0, filtered_pak=0, throttled=0, enabled=0, disabled=0
+ rx_framing_err=0, rx_overflow_err=0, rx_buffer_err=0
+ rx_bpe_err=0, rx_soft_overflow_err=0, rx_no_enp=0, rx_discard=0
+ tx_one_col_err=0, tx_more_col_err=0, tx_no_enp=0, tx_deferred_err=0
+ tx_underrun_err=0, tx_late_collision_err=0, tx_loss_carrier_err=0
+ tx_exc_collision_err=0, tx_buff_err=0, fatal_tx_err=0
+ hsrp_conf=0, need_af_check=0
+ tx_limited=0(64)
+
+Interface Ethernet2/1
+Hardware is AMD Unknown
+ADDR: F08A5970, FASTSEND: 804DD46, MCI_INDEX: 0
+DIST ROUTE ENABLED: 0
+Route Cache Flag: 11
+ amdp2_instance=0xF08A6C80, registers=0xF08A5918, ib=0xF08A7088
+ rx ring entries=32, tx ring entries=64
+ rxring=0xF08A70D8, rxr shadow=0xF08A7310, rx_head=0, rx_tail=0
+ txring=0xF08A73C8, txr shadow=0xF08A7800, tx_head=3, tx_tail=3, tx_count=0
+ running=1, port id=0x11299180
+ Software MAC address filter(hash:length/addr/mask/hits):
+  0xC0:  0  0100.0ccc.cccc  0000.0000.0000         0
+  0xC0:  1  0180.c200.0002  0000.0000.0000         0
+  0xC5:  0  0180.c200.0007  0000.0000.0000         0
+  0xCC:  0  0180.c200.000e  0000.0000.0000         0
+ spurious_idon=0, filtered_pak=0, throttled=0, enabled=0, disabled=0
+ rx_framing_err=0, rx_overflow_err=0, rx_buffer_err=0
+ rx_bpe_err=0, rx_soft_overflow_err=0, rx_no_enp=0, rx_discard=0
+ tx_one_col_err=0, tx_more_col_err=0, tx_no_enp=0, tx_deferred_err=0
+ tx_underrun_err=0, tx_late_collision_err=0, tx_loss_carrier_err=0
+ tx_exc_collision_err=0, tx_buff_err=0, fatal_tx_err=0
+ hsrp_conf=0, need_af_check=0
+ tx_limited=0(64)
+
+Interface Ethernet2/2
+Hardware is AMD Unknown
+ADDR: F08B7F50, FASTSEND: 804DD46, MCI_INDEX: 0
+DIST ROUTE ENABLED: 0
+Route Cache Flag: 11
+ amdp2_instance=0xF08B9260, registers=0xF08B7EF8, ib=0xF08B9668
+ rx ring entries=32, tx ring entries=64
+ rxring=0xF08B96B8, rxr shadow=0xF08B98F0, rx_head=0, rx_tail=0
+ txring=0xF08B99A8, txr shadow=0xF08B9DE0, tx_head=7, tx_tail=7, tx_count=0
+ running=1, port id=0x112991D8
+ Software MAC address filter(hash:length/addr/mask/hits):
+  0xC0:  0  0100.0ccc.cccc  0000.0000.0000         0
+  0xC0:  1  0180.c200.0002  0000.0000.0000         0
+  0xC5:  0  0180.c200.0007  0000.0000.0000         0
+  0xCC:  0  0180.c200.000e  0000.0000.0000         0
+ spurious_idon=0, filtered_pak=0, throttled=0, enabled=0, disabled=0
+ rx_framing_err=0, rx_overflow_err=0, rx_buffer_err=0
+ rx_bpe_err=0, rx_soft_overflow_err=0, rx_no_enp=0, rx_discard=0
+ tx_one_col_err=0, tx_more_col_err=0, tx_no_enp=0, tx_deferred_err=0
+ tx_underrun_err=0, tx_late_collision_err=0, tx_loss_carrier_err=0
+ tx_exc_collision_err=0, tx_buff_err=0, fatal_tx_err=0
+ hsrp_conf=0, need_af_check=0
+ tx_limited=0(64)
+
+Interface Ethernet2/3
+Hardware is AMD Unknown
+ADDR: F08CA590, FASTSEND: 804DD46, MCI_INDEX: 0
+DIST ROUTE ENABLED: 0
+Route Cache Flag: 11
+ amdp2_instance=0xF08CB8A0, registers=0xF08CA538, ib=0xF08CBCA8
+ rx ring entries=32, tx ring entries=64
+ rxring=0xF08CBCF8, rxr shadow=0xF08CBF30, rx_head=0, rx_tail=0
+ txring=0xF08CBFE8, txr shadow=0xF08CC420, tx_head=6, tx_tail=6, tx_count=0
+ running=1, port id=0x11299230
+ Software MAC address filter(hash:length/addr/mask/hits):
+  0xC0:  0  0100.0ccc.cccc  0000.0000.0000         0
+  0xC0:  1  0180.c200.0002  0000.0000.0000         0
+  0xC5:  0  0180.c200.0007  0000.0000.0000         0
+  0xCC:  0  0180.c200.000e  0000.0000.0000         0
+ spurious_idon=0, filtered_pak=0, throttled=0, enabled=0, disabled=0
+ rx_framing_err=0, rx_overflow_err=0, rx_buffer_err=0
+ rx_bpe_err=0, rx_soft_overflow_err=0, rx_no_enp=0, rx_discard=0
+ tx_one_col_err=0, tx_more_col_err=0, tx_no_enp=0, tx_deferred_err=0
+ tx_underrun_err=0, tx_late_collision_err=0, tx_loss_carrier_err=0
+ tx_exc_collision_err=37, tx_buff_err=0, fatal_tx_err=0
+ hsrp_conf=0, need_af_check=0
+ tx_limited=0(64)
+
+Interface Ethernet3/0
+Hardware is AMD Unknown
+ADDR: F08DE070, FASTSEND: 804DD46, MCI_INDEX: 0
+DIST ROUTE ENABLED: 0
+Route Cache Flag: 11
+ amdp2_instance=0xF08DF380, registers=0xF08DE018, ib=0xF08DF788
+ rx ring entries=32, tx ring entries=64
+ rxring=0xF08DF7D8, rxr shadow=0xF08DFA10, rx_head=0, rx_tail=0
+ txring=0xF08DFAC8, txr shadow=0xF08DFF00, tx_head=63, tx_tail=63, tx_count=0
+ running=1, port id=0x11299288
+ Software MAC address filter(hash:length/addr/mask/hits):
+  0xC0:  0  0100.0ccc.cccc  0000.0000.0000         0
+  0xC0:  1  0180.c200.0002  0000.0000.0000         0
+  0xC5:  0  0180.c200.0007  0000.0000.0000         0
+  0xCC:  0  0180.c200.000e  0000.0000.0000         0
+ spurious_idon=0, filtered_pak=0, throttled=0, enabled=0, disabled=0
+ rx_framing_err=0, rx_overflow_err=0, rx_buffer_err=0
+ rx_bpe_err=0, rx_soft_overflow_err=0, rx_no_enp=0, rx_discard=0
+ tx_one_col_err=0, tx_more_col_err=0, tx_no_enp=0, tx_deferred_err=0
+ tx_underrun_err=0, tx_late_collision_err=0, tx_loss_carrier_err=0
+ tx_exc_collision_err=40, tx_buff_err=0, fatal_tx_err=0
+ hsrp_conf=0, need_af_check=0
+ tx_limited=0(64)
+
+Interface Ethernet3/1
+Hardware is AMD Unknown
+ADDR: F08F0650, FASTSEND: 804DD46, MCI_INDEX: 0
+DIST ROUTE ENABLED: 0
+Route Cache Flag: 11
+ amdp2_instance=0xF08F1960, registers=0xF08F05F8, ib=0xF08F1D68
+ rx ring entries=32, tx ring entries=64
+ rxring=0xF08F1DB8, rxr shadow=0xF08F1FF0, rx_head=0, rx_tail=0
+ txring=0xF08F20A8, txr shadow=0xF08F24E0, tx_head=6, tx_tail=6, tx_count=0
+ running=1, port id=0x112992E0
+ Software MAC address filter(hash:length/addr/mask/hits):
+  0xC0:  0  0100.0ccc.cccc  0000.0000.0000         0
+  0xC0:  1  0180.c200.0002  0000.0000.0000         0
+  0xC5:  0  0180.c200.0007  0000.0000.0000         0
+  0xCC:  0  0180.c200.000e  0000.0000.0000         0
+ spurious_idon=0, filtered_pak=0, throttled=0, enabled=0, disabled=0
+ rx_framing_err=0, rx_overflow_err=0, rx_buffer_err=0
+ rx_bpe_err=0, rx_soft_overflow_err=0, rx_no_enp=0, rx_discard=0
+ tx_one_col_err=0, tx_more_col_err=0, tx_no_enp=0, tx_deferred_err=0
+ tx_underrun_err=0, tx_late_collision_err=0, tx_loss_carrier_err=0
+ tx_exc_collision_err=50, tx_buff_err=0, fatal_tx_err=0
+ hsrp_conf=0, need_af_check=0
+ tx_limited=0(64)
+
+Interface Ethernet3/2
+Hardware is AMD Unknown
+ADDR: F0902C90, FASTSEND: 804DD46, MCI_INDEX: 0
+DIST ROUTE ENABLED: 0
+Route Cache Flag: 11
+ amdp2_instance=0xF0903FA0, registers=0xF0902C38, ib=0xF09043A8
+ rx ring entries=32, tx ring entries=64
+ rxring=0xF09043F8, rxr shadow=0xF0904630, rx_head=0, rx_tail=0
+ txring=0xF09046E8, txr shadow=0xF0904B20, tx_head=63, tx_tail=63, tx_count=0
+ running=1, port id=0x11299338
+ Software MAC address filter(hash:length/addr/mask/hits):
+  0xC0:  0  0100.0ccc.cccc  0000.0000.0000         0
+  0xC0:  1  0180.c200.0002  0000.0000.0000         0
+  0xC5:  0  0180.c200.0007  0000.0000.0000         0
+  0xCC:  0  0180.c200.000e  0000.0000.0000         0
+ spurious_idon=0, filtered_pak=0, throttled=0, enabled=0, disabled=0
+ rx_framing_err=0, rx_overflow_err=0, rx_buffer_err=0
+ rx_bpe_err=0, rx_soft_overflow_err=0, rx_no_enp=0, rx_discard=0
+ tx_one_col_err=0, tx_more_col_err=0, tx_no_enp=0, tx_deferred_err=0
+ tx_underrun_err=0, tx_late_collision_err=0, tx_loss_carrier_err=0
+ tx_exc_collision_err=53, tx_buff_err=0, fatal_tx_err=0
+ hsrp_conf=0, need_af_check=0
+ tx_limited=0(64)
+
+Interface Ethernet3/3
+Hardware is AMD Unknown
+ADDR: F0916770, FASTSEND: 804DD46, MCI_INDEX: 0
+DIST ROUTE ENABLED: 0
+Route Cache Flag: 11
+ amdp2_instance=0xF0917A80, registers=0xF0916718, ib=0xF0917E88
+ rx ring entries=32, tx ring entries=64
+ rxring=0xF0917ED8, rxr shadow=0xF0918110, rx_head=27, rx_tail=0
+ txring=0xF09181C8, txr shadow=0xF0918600, tx_head=21, tx_tail=21, tx_count=0
+ running=1, port id=0x11299390
+ Software MAC address filter(hash:length/addr/mask/hits):
+  0xC0:  0  0100.0ccc.cccc  0000.0000.0000         0
+  0xC0:  1  0180.c200.0002  0000.0000.0000         0
+  0xC5:  0  0180.c200.0007  0000.0000.0000         0
+  0xCC:  0  0180.c200.000e  0000.0000.0000         0
+ spurious_idon=0, filtered_pak=0, throttled=0, enabled=0, disabled=0
+ rx_framing_err=0, rx_overflow_err=0, rx_buffer_err=0
+ rx_bpe_err=0, rx_soft_overflow_err=0, rx_no_enp=0, rx_discard=0
+ tx_one_col_err=0, tx_more_col_err=0, tx_no_enp=0, tx_deferred_err=0
+ tx_underrun_err=0, tx_late_collision_err=0, tx_loss_carrier_err=0
+ tx_exc_collision_err=50, tx_buff_err=0, fatal_tx_err=0
+ hsrp_conf=0, need_af_check=0
+ tx_limited=0(64)
+
+internet#

@@ -1,0 +1,19 @@
+sh tunnel endpoint tunnel 0
+ Tunnel0 running in multi-GRE/IP mode
+
+ Endpoint transport 192.168.12.2 Refcount 3 Base 0xF2860108 Create Time 00:14:17
+   overlay 172.16.20.2 Refcount 2 Parent 0xF2860108 Create Time 00:14:17
+   Tunnel Subblocks:
+      tunnel-nhrp-sb:
+         NHRP subblock has 1 entries
+ Endpoint transport 192.168.13.3 Refcount 3 Base 0xF28601F8 Create Time 00:03:28
+   overlay 172.16.30.3 Refcount 2 Parent 0xF28601F8 Create Time 00:03:28
+   Tunnel Subblocks:
+      tunnel-nhrp-sb:
+         NHRP subblock has 1 entries
+ Endpoint transport 192.168.15.5 Refcount 3 Base 0xF2860018 Create Time 00:06:58
+   overlay 172.16.50.5 Refcount 2 Parent 0xF2860018 Create Time 00:06:58
+   Tunnel Subblocks:
+      tunnel-nhrp-sb:
+         NHRP subblock has 1 entries
+IOU4#

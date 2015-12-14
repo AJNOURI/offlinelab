@@ -1,0 +1,9 @@
+sh ip route summary
+IP routing table name is default (0x0)
+IP routing table maximum-paths is 32
+Route Source    Networks    Subnets     Replicates  Overhead    Memory (bytes)
+connected       0           2           0           120         360
+static          0           0           0           0           0
+internal        1                                               440
+Total           1           2           0           120         800
+IOU1#

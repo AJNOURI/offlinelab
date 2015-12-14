@@ -1,0 +1,4 @@
+sh adjacency
+Protocol Interface                 Address
+IP       Vlan10                    192.168.0.121(7)
+IOU1#

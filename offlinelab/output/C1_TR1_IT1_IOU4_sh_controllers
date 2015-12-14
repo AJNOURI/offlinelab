@@ -1,0 +1,379 @@
+sh controllers
+Interface Ethernet0/0
+Hardware is AMD Unknown
+ADDR: F07214C0, FASTSEND: 804DD46, MCI_INDEX: 0
+DIST ROUTE ENABLED: 0
+Route Cache Flag: 11
+ amdp2_instance=0xF07227D0, registers=0xF0721468, ib=0xF0742C48
+ rx ring entries=32, tx ring entries=64
+ rxring=0xF0742C98, rxr shadow=0xF0742ED0, rx_head=11, rx_tail=0
+ txring=0xF0742F88, txr shadow=0xF07433C0, tx_head=24, tx_tail=24, tx_count=0
+ running=1, port id=0x123C6E68
+ Software MAC address filter(hash:length/addr/mask/hits):
+  0xC0:  0  0100.0ccc.cccc  0000.0000.0000         0
+  0xC0:  1  0180.c200.0002  0000.0000.0000         0
+  0xC5:  0  0180.c200.0007  0000.0000.0000         0
+  0xCC:  0  0180.c200.000e  0000.0000.0000         0
+ spurious_idon=0, filtered_pak=0, throttled=0, enabled=0, disabled=0
+ rx_framing_err=0, rx_overflow_err=0, rx_buffer_err=0
+ rx_bpe_err=0, rx_soft_overflow_err=0, rx_no_enp=0, rx_discard=0
+ tx_one_col_err=0, tx_more_col_err=0, tx_no_enp=0, tx_deferred_err=0
+ tx_underrun_err=0, tx_late_collision_err=0, tx_loss_carrier_err=0
+ tx_exc_collision_err=0, tx_buff_err=0, fatal_tx_err=0
+ hsrp_conf=0, need_af_check=0
+ tx_limited=0(64)
+
+Interface Ethernet0/1
+Hardware is AMD Unknown
+ADDR: F0753B10, FASTSEND: 804DD46, MCI_INDEX: 0
+DIST ROUTE ENABLED: 0
+Route Cache Flag: 11
+ amdp2_instance=0xF0754E20, registers=0xF0753AB8, ib=0xF0755228
+ rx ring entries=32, tx ring entries=64
+ rxring=0xF0755278, rxr shadow=0xF07554B0, rx_head=0, rx_tail=0
+ txring=0xF0755568, txr shadow=0xF07559A0, tx_head=31, tx_tail=31, tx_count=0
+ running=1, port id=0x123C6EC0
+ Software MAC address filter(hash:length/addr/mask/hits):
+  0x54:  0  0100.5e00.000a  0000.0000.0000         0
+  0xC0:  0  0100.0ccc.cccc  0000.0000.0000         0
+  0xC0:  1  0180.c200.0002  0000.0000.0000         0
+  0xC5:  0  0180.c200.0007  0000.0000.0000         0
+  0xCC:  0  0180.c200.000e  0000.0000.0000         0
+ spurious_idon=0, filtered_pak=0, throttled=0, enabled=0, disabled=0
+ rx_framing_err=0, rx_overflow_err=0, rx_buffer_err=0
+ rx_bpe_err=0, rx_soft_overflow_err=0, rx_no_enp=0, rx_discard=0
+ tx_one_col_err=0, tx_more_col_err=0, tx_no_enp=0, tx_deferred_err=0
+ tx_underrun_err=0, tx_late_collision_err=0, tx_loss_carrier_err=0
+ tx_exc_collision_err=0, tx_buff_err=0, fatal_tx_err=0
+ hsrp_conf=0, need_af_check=0
+ tx_limited=0(64)
+
+Interface Ethernet0/2
+Hardware is AMD Unknown
+ADDR: F0766150, FASTSEND: 804DD46, MCI_INDEX: 0
+DIST ROUTE ENABLED: 0
+Route Cache Flag: 11
+ amdp2_instance=0xF0767460, registers=0xF07660F8, ib=0xF0767868
+ rx ring entries=32, tx ring entries=64
+ rxring=0xF07678B8, rxr shadow=0xF0767AF0, rx_head=0, rx_tail=0
+ txring=0xF0767BA8, txr shadow=0xF0767FE0, tx_head=0, tx_tail=0, tx_count=0
+ running=0, port id=0x123C6F18
+ Software MAC address filter(hash:length/addr/mask/hits):
+  0xC0:  0  0180.c200.0002  0000.0000.0000         0
+  0xC0:  1  0100.0ccc.cccc  0000.0000.0000         0
+  0xC5:  0  0180.c200.0007  0000.0000.0000         0
+  0xCC:  0  0180.c200.000e  0000.0000.0000         0
+ spurious_idon=0, filtered_pak=0, throttled=0, enabled=0, disabled=0
+ rx_framing_err=0, rx_overflow_err=0, rx_buffer_err=0
+ rx_bpe_err=0, rx_soft_overflow_err=0, rx_no_enp=0, rx_discard=0
+ tx_one_col_err=0, tx_more_col_err=0, tx_no_enp=0, tx_deferred_err=0
+ tx_underrun_err=0, tx_late_collision_err=0, tx_loss_carrier_err=0
+ tx_exc_collision_err=0, tx_buff_err=0, fatal_tx_err=0
+ hsrp_conf=0, need_af_check=0
+ tx_limited=0(64)
+
+Interface Ethernet0/3
+Hardware is AMD Unknown
+ADDR: F0779C30, FASTSEND: 804DD46, MCI_INDEX: 0
+DIST ROUTE ENABLED: 0
+Route Cache Flag: 11
+ amdp2_instance=0xF077AF40, registers=0xF0779BD8, ib=0xF077B348
+ rx ring entries=32, tx ring entries=64
+ rxring=0xF077B398, rxr shadow=0xF077B5D0, rx_head=0, rx_tail=0
+ txring=0xF077B688, txr shadow=0xF077BAC0, tx_head=0, tx_tail=0, tx_count=0
+ running=0, port id=0x123C6F70
+ Software MAC address filter(hash:length/addr/mask/hits):
+  0xC0:  0  0180.c200.0002  0000.0000.0000         0
+  0xC0:  1  0100.0ccc.cccc  0000.0000.0000         0
+  0xC5:  0  0180.c200.0007  0000.0000.0000         0
+  0xCC:  0  0180.c200.000e  0000.0000.0000         0
+ spurious_idon=0, filtered_pak=0, throttled=0, enabled=0, disabled=0
+ rx_framing_err=0, rx_overflow_err=0, rx_buffer_err=0
+ rx_bpe_err=0, rx_soft_overflow_err=0, rx_no_enp=0, rx_discard=0
+ tx_one_col_err=0, tx_more_col_err=0, tx_no_enp=0, tx_deferred_err=0
+ tx_underrun_err=0, tx_late_collision_err=0, tx_loss_carrier_err=0
+ tx_exc_collision_err=0, tx_buff_err=0, fatal_tx_err=0
+ hsrp_conf=0, need_af_check=0
+ tx_limited=0(64)
+
+Interface Ethernet1/0
+Hardware is AMD Unknown
+ADDR: F078C210, FASTSEND: 804DD46, MCI_INDEX: 0
+DIST ROUTE ENABLED: 0
+Route Cache Flag: 11
+ amdp2_instance=0xF078D520, registers=0xF078C1B8, ib=0xF078D928
+ rx ring entries=32, tx ring entries=64
+ rxring=0xF078D978, rxr shadow=0xF078DBB0, rx_head=0, rx_tail=0
+ txring=0xF078DC68, txr shadow=0xF078E0A0, tx_head=0, tx_tail=0, tx_count=0
+ running=0, port id=0x123C6FC8
+ Software MAC address filter(hash:length/addr/mask/hits):
+  0xC0:  0  0180.c200.0002  0000.0000.0000         0
+  0xC0:  1  0100.0ccc.cccc  0000.0000.0000         0
+  0xC5:  0  0180.c200.0007  0000.0000.0000         0
+  0xCC:  0  0180.c200.000e  0000.0000.0000         0
+ spurious_idon=0, filtered_pak=0, throttled=0, enabled=0, disabled=0
+ rx_framing_err=0, rx_overflow_err=0, rx_buffer_err=0
+ rx_bpe_err=0, rx_soft_overflow_err=0, rx_no_enp=0, rx_discard=0
+ tx_one_col_err=0, tx_more_col_err=0, tx_no_enp=0, tx_deferred_err=0
+ tx_underrun_err=0, tx_late_collision_err=0, tx_loss_carrier_err=0
+ tx_exc_collision_err=0, tx_buff_err=0, fatal_tx_err=0
+ hsrp_conf=0, need_af_check=0
+ tx_limited=0(64)
+
+Interface Ethernet1/1
+Hardware is AMD Unknown
+ADDR: F079E850, FASTSEND: 804DD46, MCI_INDEX: 0
+DIST ROUTE ENABLED: 0
+Route Cache Flag: 11
+ amdp2_instance=0xF079FB60, registers=0xF079E7F8, ib=0xF079FF68
+ rx ring entries=32, tx ring entries=64
+ rxring=0xF079FFB8, rxr shadow=0xF07A01F0, rx_head=0, rx_tail=0
+ txring=0xF07A02A8, txr shadow=0xF07A06E0, tx_head=0, tx_tail=0, tx_count=0
+ running=0, port id=0x123C7020
+ Software MAC address filter(hash:length/addr/mask/hits):
+  0xC0:  0  0180.c200.0002  0000.0000.0000         0
+  0xC0:  1  0100.0ccc.cccc  0000.0000.0000         0
+  0xC5:  0  0180.c200.0007  0000.0000.0000         0
+  0xCC:  0  0180.c200.000e  0000.0000.0000         0
+ spurious_idon=0, filtered_pak=0, throttled=0, enabled=0, disabled=0
+ rx_framing_err=0, rx_overflow_err=0, rx_buffer_err=0
+ rx_bpe_err=0, rx_soft_overflow_err=0, rx_no_enp=0, rx_discard=0
+ tx_one_col_err=0, tx_more_col_err=0, tx_no_enp=0, tx_deferred_err=0
+ tx_underrun_err=0, tx_late_collision_err=0, tx_loss_carrier_err=0
+ tx_exc_collision_err=0, tx_buff_err=0, fatal_tx_err=0
+ hsrp_conf=0, need_af_check=0
+ tx_limited=0(64)
+
+Interface Ethernet1/2
+Hardware is AMD Unknown
+ADDR: F07B2330, FASTSEND: 804DD46, MCI_INDEX: 0
+DIST ROUTE ENABLED: 0
+Route Cache Flag: 11
+ amdp2_instance=0xF07B3640, registers=0xF07B22D8, ib=0xF07B3A48
+ rx ring entries=32, tx ring entries=64
+ rxring=0xF07B3A98, rxr shadow=0xF07B3CD0, rx_head=0, rx_tail=0
+ txring=0xF07B3D88, txr shadow=0xF07B41C0, tx_head=0, tx_tail=0, tx_count=0
+ running=0, port id=0x123C7078
+ Software MAC address filter(hash:length/addr/mask/hits):
+  0xC0:  0  0180.c200.0002  0000.0000.0000         0
+  0xC0:  1  0100.0ccc.cccc  0000.0000.0000         0
+  0xC5:  0  0180.c200.0007  0000.0000.0000         0
+  0xCC:  0  0180.c200.000e  0000.0000.0000         0
+ spurious_idon=0, filtered_pak=0, throttled=0, enabled=0, disabled=0
+ rx_framing_err=0, rx_overflow_err=0, rx_buffer_err=0
+ rx_bpe_err=0, rx_soft_overflow_err=0, rx_no_enp=0, rx_discard=0
+ tx_one_col_err=0, tx_more_col_err=0, tx_no_enp=0, tx_deferred_err=0
+ tx_underrun_err=0, tx_late_collision_err=0, tx_loss_carrier_err=0
+ tx_exc_collision_err=0, tx_buff_err=0, fatal_tx_err=0
+ hsrp_conf=0, need_af_check=0
+ tx_limited=0(64)
+
+Interface Ethernet1/3
+Hardware is AMD Unknown
+ADDR: F07C4910, FASTSEND: 804DD46, MCI_INDEX: 0
+DIST ROUTE ENABLED: 0
+Route Cache Flag: 11
+ amdp2_instance=0xF07C5C20, registers=0xF07C48B8, ib=0xF07C6028
+ rx ring entries=32, tx ring entries=64
+ rxring=0xF07C6078, rxr shadow=0xF07C62B0, rx_head=23, rx_tail=0
+ txring=0xF07C6368, txr shadow=0xF07C67A0, tx_head=44, tx_tail=44, tx_count=0
+ running=1, port id=0x123C70D0
+ Software MAC address filter(hash:length/addr/mask/hits):
+  0xC0:  0  0100.0ccc.cccc  0000.0000.0000         0
+  0xC0:  1  0180.c200.0002  0000.0000.0000         0
+  0xC5:  0  0180.c200.0007  0000.0000.0000         0
+  0xCC:  0  0180.c200.000e  0000.0000.0000         0
+ spurious_idon=0, filtered_pak=0, throttled=0, enabled=0, disabled=0
+ rx_framing_err=0, rx_overflow_err=0, rx_buffer_err=0
+ rx_bpe_err=0, rx_soft_overflow_err=0, rx_no_enp=0, rx_discard=0
+ tx_one_col_err=0, tx_more_col_err=0, tx_no_enp=0, tx_deferred_err=0
+ tx_underrun_err=0, tx_late_collision_err=0, tx_loss_carrier_err=0
+ tx_exc_collision_err=0, tx_buff_err=0, fatal_tx_err=0
+ hsrp_conf=0, need_af_check=0
+ tx_limited=0(64)
+
+M4T: show controller:
+PAS unit 0, subunit 0, f/w version 1-45, rev ID 0xFFFF, version 1
+idb = 0xF07D9DB8, ds = 0xF07DB0C8, ssb=0xF07DB480
+Clock mux=0x0, ucmd_ctrl=0x0, port_status=0x73
+Serial config=0x8, line config=0x200
+maxdgram=1608, bufpool=78Kb, 120 particles
+     DCD=up  DSR=up  DTR=down  RTS=down  CTS=up
+line state: down
+cable type : V.11 (X.21) DTE cable, received clockrate n/a
+running=0, port id=0x123C7128
+
+base0 registers=0xF07D6EF8, base1 registers=0xF07D8EF8
+mxt_ds=0xF2A13F90, rx ring entries=78, tx ring entries=128
+rxring=0xF07DB810, rxr shadow=0xF07DBAB8, rx_head=0
+txring=0xF07DBE98, txr shadow=0xF07DC2D0, tx_head=0, tx_tail=0, tx_count=0
+throttled=0, enabled=0
+halted=0, last halt reason=0
+Microcode fatal errors=0
+rx_no_eop_err=0, rx_no_stp_err=0, rx_no_eop_stp_err=0
+rx_no_buf=0, rx_soft_overrun_err=0, dump_err= 0, bogus=0, mxt_flags=0x0
+tx_underrun_err=0, tx_soft_underrun_err=0, tx_limited=0(128)
+tx_fullring=0, tx_started=0, mxt_flush_count=1
+rx_int_count=0, tx_int_count=2
+M4T: show controller:
+PAS unit 1, subunit 1, f/w version 1-45, rev ID 0xFFFF, version 1
+idb = 0xF07F2438, ds = 0xF07F3748, ssb=0xF07F3B00
+Clock mux=0x0, ucmd_ctrl=0x0, port_status=0x73
+Serial config=0x8, line config=0x200
+maxdgram=1608, bufpool=78Kb, 120 particles
+     DCD=up  DSR=up  DTR=down  RTS=down  CTS=up
+line state: down
+cable type : V.11 (X.21) DTE cable, received clockrate n/a
+running=0, port id=0x123C7180
+
+base0 registers=0xF07D6EF8, base1 registers=0xF07D8EF8
+mxt_ds=0xF2A13F90, rx ring entries=78, tx ring entries=128
+rxring=0xF07F3E90, rxr shadow=0xF07F4138, rx_head=0
+txring=0xF07F4518, txr shadow=0xF07F4950, tx_head=0, tx_tail=0, tx_count=0
+throttled=0, enabled=0
+halted=0, last halt reason=0
+Microcode fatal errors=0
+rx_no_eop_err=0, rx_no_stp_err=0, rx_no_eop_stp_err=0
+rx_no_buf=0, rx_soft_overrun_err=0, dump_err= 0, bogus=0, mxt_flags=0x0
+tx_underrun_err=0, tx_soft_underrun_err=0, tx_limited=0(128)
+tx_fullring=0, tx_started=0, mxt_flush_count=1
+rx_int_count=0, tx_int_count=2
+M4T: show controller:
+PAS unit 2, subunit 2, f/w version 1-45, rev ID 0xFFFF, version 1
+idb = 0xF0809618, ds = 0xF080A928, ssb=0xF080ACE0
+Clock mux=0x0, ucmd_ctrl=0x0, port_status=0x73
+Serial config=0x8, line config=0x200
+maxdgram=1608, bufpool=78Kb, 120 particles
+     DCD=up  DSR=up  DTR=down  RTS=down  CTS=up
+line state: down
+cable type : V.11 (X.21) DTE cable, received clockrate n/a
+running=0, port id=0x123C71D8
+
+base0 registers=0xF07D6EF8, base1 registers=0xF07D8EF8
+mxt_ds=0xF2A13F90, rx ring entries=78, tx ring entries=128
+rxring=0xF080B070, rxr shadow=0xF080B318, rx_head=0
+txring=0xF080B6F8, txr shadow=0xF080BB30, tx_head=0, tx_tail=0, tx_count=0
+throttled=0, enabled=0
+halted=0, last halt reason=0
+Microcode fatal errors=0
+rx_no_eop_err=0, rx_no_stp_err=0, rx_no_eop_stp_err=0
+rx_no_buf=0, rx_soft_overrun_err=0, dump_err= 0, bogus=0, mxt_flags=0x0
+tx_underrun_err=0, tx_soft_underrun_err=0, tx_limited=0(128)
+tx_fullring=0, tx_started=0, mxt_flush_count=1
+rx_int_count=0, tx_int_count=2
+M4T: show controller:
+PAS unit 3, subunit 3, f/w version 1-45, rev ID 0xFFFF, version 1
+idb = 0xF0820818, ds = 0xF0821B28, ssb=0xF0821EE0
+Clock mux=0x0, ucmd_ctrl=0x0, port_status=0x73
+Serial config=0x8, line config=0x200
+maxdgram=1608, bufpool=78Kb, 120 particles
+     DCD=up  DSR=up  DTR=down  RTS=down  CTS=up
+line state: down
+cable type : V.11 (X.21) DTE cable, received clockrate n/a
+running=0, port id=0x123C7230
+
+base0 registers=0xF07D6EF8, base1 registers=0xF07D8EF8
+mxt_ds=0xF2A13F90, rx ring entries=78, tx ring entries=128
+rxring=0xF0822270, rxr shadow=0xF0822518, rx_head=0
+txring=0xF08228F8, txr shadow=0xF0822D30, tx_head=0, tx_tail=0, tx_count=0
+throttled=0, enabled=0
+halted=0, last halt reason=0
+Microcode fatal errors=0
+rx_no_eop_err=0, rx_no_stp_err=0, rx_no_eop_stp_err=0
+rx_no_buf=0, rx_soft_overrun_err=0, dump_err= 0, bogus=0, mxt_flags=0x0
+tx_underrun_err=0, tx_soft_underrun_err=0, tx_limited=0(128)
+tx_fullring=0, tx_started=0, mxt_flush_count=1
+rx_int_count=0, tx_int_count=2
+M4T: show controller:
+PAS unit 4, subunit 0, f/w version 1-45, rev ID 0xFFFF, version 1
+idb = 0xF083BD78, ds = 0xF083D088, ssb=0xF083D440
+Clock mux=0x0, ucmd_ctrl=0x0, port_status=0x3B
+Serial config=0x8, line config=0x200
+maxdgram=1608, bufpool=78Kb, 120 particles
+     DCD=down  DSR=down  DTR=up  RTS=up  CTS=down
+line state: down
+cable type : V.11 (X.21) DCE cable, received clockrate 2015232
+running=0, port id=0x123C7288
+
+base0 registers=0xF0838EB8, base1 registers=0xF083AEB8
+mxt_ds=0xF2A13F90, rx ring entries=78, tx ring entries=128
+rxring=0xF083D7D0, rxr shadow=0xF083DA78, rx_head=0
+txring=0xF083DE58, txr shadow=0xF083E290, tx_head=0, tx_tail=0, tx_count=0
+throttled=0, enabled=0
+halted=0, last halt reason=0
+Microcode fatal errors=0
+rx_no_eop_err=0, rx_no_stp_err=0, rx_no_eop_stp_err=0
+rx_no_buf=0, rx_soft_overrun_err=0, dump_err= 0, bogus=0, mxt_flags=0x0
+tx_underrun_err=0, tx_soft_underrun_err=0, tx_limited=0(128)
+tx_fullring=0, tx_started=0, mxt_flush_count=1
+rx_int_count=0, tx_int_count=2
+M4T: show controller:
+PAS unit 5, subunit 1, f/w version 1-45, rev ID 0xFFFF, version 1
+idb = 0xF0852F58, ds = 0xF0854268, ssb=0xF0854620
+Clock mux=0x0, ucmd_ctrl=0x0, port_status=0x3B
+Serial config=0x8, line config=0x200
+maxdgram=1608, bufpool=78Kb, 120 particles
+     DCD=down  DSR=down  DTR=up  RTS=up  CTS=down
+line state: down
+cable type : V.11 (X.21) DCE cable, received clockrate 2015232
+running=0, port id=0x123C72E0
+
+base0 registers=0xF0838EB8, base1 registers=0xF083AEB8
+mxt_ds=0xF2A13F90, rx ring entries=78, tx ring entries=128
+rxring=0xF08549B0, rxr shadow=0xF0854C58, rx_head=0
+txring=0xF0855038, txr shadow=0xF0855470, tx_head=0, tx_tail=0, tx_count=0
+throttled=0, enabled=0
+halted=0, last halt reason=0
+Microcode fatal errors=0
+rx_no_eop_err=0, rx_no_stp_err=0, rx_no_eop_stp_err=0
+rx_no_buf=0, rx_soft_overrun_err=0, dump_err= 0, bogus=0, mxt_flags=0x0
+tx_underrun_err=0, tx_soft_underrun_err=0, tx_limited=0(128)
+tx_fullring=0, tx_started=0, mxt_flush_count=1
+rx_int_count=0, tx_int_count=2
+M4T: show controller:
+PAS unit 6, subunit 2, f/w version 1-45, rev ID 0xFFFF, version 1
+idb = 0xF086A158, ds = 0xF086B468, ssb=0xF086B820
+Clock mux=0x0, ucmd_ctrl=0x0, port_status=0x3B
+Serial config=0x8, line config=0x200
+maxdgram=1608, bufpool=78Kb, 120 particles
+     DCD=down  DSR=down  DTR=up  RTS=up  CTS=down
+line state: down
+cable type : V.11 (X.21) DCE cable, received clockrate 2015232
+running=0, port id=0x123C7338
+
+base0 registers=0xF0838EB8, base1 registers=0xF083AEB8
+mxt_ds=0xF2A13F90, rx ring entries=78, tx ring entries=128
+rxring=0xF086BBB0, rxr shadow=0xF086BE58, rx_head=0
+txring=0xF086C238, txr shadow=0xF086C670, tx_head=0, tx_tail=0, tx_count=0
+throttled=0, enabled=0
+halted=0, last halt reason=0
+Microcode fatal errors=0
+rx_no_eop_err=0, rx_no_stp_err=0, rx_no_eop_stp_err=0
+rx_no_buf=0, rx_soft_overrun_err=0, dump_err= 0, bogus=0, mxt_flags=0x0
+tx_underrun_err=0, tx_soft_underrun_err=0, tx_limited=0(128)
+tx_fullring=0, tx_started=0, mxt_flush_count=1
+rx_int_count=0, tx_int_count=2
+M4T: show controller:
+PAS unit 7, subunit 3, f/w version 1-45, rev ID 0xFFFF, version 1
+idb = 0xF08827F8, ds = 0xF0883B08, ssb=0xF0883EC0
+Clock mux=0x0, ucmd_ctrl=0x0, port_status=0x3B
+Serial config=0x8, line config=0x200
+maxdgram=1608, bufpool=78Kb, 120 particles
+     DCD=down  DSR=down  DTR=up  RTS=up  CTS=down
+line state: down
+cable type : V.11 (X.21) DCE cable, received clockrate 2015232
+running=0, port id=0x123C7390
+
+base0 registers=0xF0838EB8, base1 registers=0xF083AEB8
+mxt_ds=0xF2A13F90, rx ring entries=78, tx ring entries=128
+rxring=0xF0884250, rxr shadow=0xF08844F8, rx_head=0
+txring=0xF08848D8, txr shadow=0xF0884D10, tx_head=0, tx_tail=0, tx_count=0
+throttled=0, enabled=0
+halted=0, last halt reason=0
+Microcode fatal errors=0
+rx_no_eop_err=0, rx_no_stp_err=0, rx_no_eop_stp_err=0
+rx_no_buf=0, rx_soft_overrun_err=0, dump_err= 0, bogus=0, mxt_flags=0x0
+tx_underrun_err=0, tx_soft_underrun_err=0, tx_limited=0(128)
+tx_fullring=0, tx_started=0, mxt_flush_count=1
+rx_int_count=0, tx_int_count=2
+IOU4#

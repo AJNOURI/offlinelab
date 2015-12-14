@@ -1,0 +1,43 @@
+sh dmvpn detail
+Legend: Attrb --> S - Static, D - Dynamic, I - Incomplete
+	N - NATed, L - Local, X - No Socket
+	# Ent --> Number of NHRP entries with same NBMA peer
+	NHS Status: E --> Expecting Replies, R --> Responding, W --> Waiting
+	UpDn Time --> Up or Down Time for a Tunnel
+==========================================================================
+
+Interface Tunnel0 is up/up, Addr. is 172.16.20.2, VRF "" 
+   Tunnel Src./Dest. addr: 192.168.12.2/MGRE, Tunnel VRF ""
+   Protocol/Transport: "multi-GRE/IP", Protect "MY_PROFILE" 
+   Interface State Control: Disabled
+   nhrp event-publisher : Disabled
+
+IPv4 NHS:
+172.16.40.4  RE priority = 0 cluster = 0
+Type:Spoke, Total NBMA Peers (v4/v6): 1
+
+# Ent  Peer NBMA Addr Peer Tunnel Add State  UpDn Tm Attrb    Target Network
+----- --------------- --------------- ----- -------- ----- -----------------
+    1   192.168.14.4     172.16.40.4    UP 00:11:18    S     172.16.40.4/32
+
+
+
+Crypto Session Details: 
+--------------------------------------------------------------------------------
+
+Interface: Tunnel0
+Session: [0xF2A56D78]
+  IKEv1 SA: local 192.168.12.2/500 remote 192.168.14.4/500 Active 
+          Capabilities:(none) connid:1006 lifetime:02:47:13
+  Crypto Session Status: UP-ACTIVE     
+  fvrf: (none),	Phase1_id: 192.168.14.4
+  IPSEC FLOW: permit 47 host 192.168.12.2 host 192.168.14.4 
+        Active SAs: 2, origin: crypto map
+        Inbound:  #pkts dec'ed 35966 drop 0 life (KB/Sec) 4151310/2921
+        Outbound: #pkts enc'ed 35994 drop 0 life (KB/Sec) 4151310/2921
+   Outbound SPI : 0x4F63B4C5, transform : esp-aes esp-sha512-hmac 
+    Socket State: Open
+
+Pending DMVPN Sessions:
+
+IOU2#

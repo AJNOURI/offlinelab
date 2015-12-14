@@ -78,7 +78,8 @@ def main():
 
     testruns = 1
     iterations = 1
-
+    
+        
     for casei in xrange(0,len(caselist)):
 
         if arg2 == '-m':
@@ -88,15 +89,17 @@ def main():
 
         casetext = caselist[casei]['case']
         casefile = caselist[casei]['casefile'] + '.yaml'
+        casefile = os.path.join(os.path.dirname('__file__'), './config', casefile)
 
         if arg5 == '-s':
             # Initialize device prior to each test caselist
             #
             logger.info(' **** Initialization started... ****')
-            stream = open('init.yaml')
+            initfile = os.path.join(os.path.dirname('__file__'), './config', 'init.yaml')
+            stream = open(cmdpath + 'init.yaml')
             rdata = yaml.load(stream)
             #print rdata
-            conn = connect('1', 'init.yaml', False)
+            conn = connect('1', cmdpath + 'init.yaml', False)
             conn.paraSsh()
             logger.info(' **** Initialization COMPLETED ****')
 
@@ -145,9 +148,10 @@ def main():
                     # *** XML ***
 
                 logger.info(' **** Case ' + str(casei+1) + ' collecting device states **** ')
+                
                 for collectfile in collectfilelist:
-                    print collectfile
-                    #remoteDev(collectfile, flog=True)
+                    collectfile = os.path.join(os.path.dirname('__file__'), './config', collectfile)
+                    logger.debug('Command file: ' + collectfile)
 
                     while True:
                         if not os.path.isfile(collectfile):
@@ -221,7 +225,8 @@ def main():
     if arg4 == '-x':
         # *** XML ***
         logger.debug(doc.toprettyxml(indent="  "))
-        f = open('mycombos.xml', 'w')
+        xmlfile = os.path.join(os.path.dirname('__file__'), './output', 'mycombos.xml')
+        f = open(xmlfile, 'w')
         doc.writexml(f)
         f.close()
         logger.info('XML report built successfully')

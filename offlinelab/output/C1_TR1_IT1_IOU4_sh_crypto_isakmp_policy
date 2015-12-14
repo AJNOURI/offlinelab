@@ -1,0 +1,10 @@
+sh crypto isakmp policy
+
+Global IKE policy
+Protection suite of priority 10
+	encryption algorithm:	AES - Advanced Encryption Standard (256 bit keys).
+	hash algorithm:		Secure Hash Standard 2 (512 bit)
+	authentication method:	Pre-Shared Key
+	Diffie-Hellman group:	#24 (2048 bit, 256 bit subgroup)
+	lifetime:		86400 seconds, no volume limit
+IOU4#

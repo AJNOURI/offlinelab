@@ -1,0 +1,11 @@
+sh cdp neighbors
+Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
+                  S - Switch, H - Host, I - IGMP, r - Repeater, P - Phone, 
+                  D - Remote, C - CVTA, M - Two-port Mac Relay 
+
+Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
+internet.cciethebeginning.wordpress.com
+                 Eth 0/0            159              R    Linux Uni Eth 0/3
+IOU1.cciethebeginning.wordpress.com
+                 Eth 1/3            167             R S   Linux Uni Eth 0/1
+IOU3#

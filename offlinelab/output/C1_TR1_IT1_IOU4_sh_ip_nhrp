@@ -1,0 +1,14 @@
+sh ip nhrp
+172.16.20.2/32 via 172.16.20.2
+   Tunnel0 created 00:14:03, expire 01:45:56
+   Type: dynamic, Flags: unique registered 
+   NBMA address: 192.168.12.2 
+172.16.30.3/32 via 172.16.30.3
+   Tunnel0 created 00:03:14, expire 01:56:45
+   Type: dynamic, Flags: unique registered 
+   NBMA address: 192.168.13.3 
+172.16.50.5/32 via 172.16.50.5
+   Tunnel0 created 00:06:44, expire 01:53:15
+   Type: dynamic, Flags: unique registered 
+   NBMA address: 192.168.15.5 
+IOU4#

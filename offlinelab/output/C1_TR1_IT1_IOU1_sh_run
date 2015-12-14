@@ -1,0 +1,197 @@
+sh run
+Building configuration...
+
+Current configuration : 3385 bytes
+!
+version 15.1
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+service compress-config
+!
+hostname IOU1
+!
+boot-start-marker
+boot-end-marker
+!
+!
+logging discriminator EXCESS severity drops 6 msg-body drops EXCESSCOLL 
+logging buffered 1000000
+logging console discriminator EXCESS
+!
+username admin privilege 15 password 0 cisco
+aaa new-model
+!
+!
+aaa authentication login default local
+!
+!
+!
+!
+!
+aaa session-id common
+clock timezone CET 1 0
+no ipv6 cef
+ipv6 multicast rpf use-bgp
+no ip icmp rate-limit unreachable
+!
+no ip domain-lookup
+ip domain-name cciethebeginning.wordpress.com
+ip cef
+!
+!
+!
+!
+spanning-tree mode pvst
+spanning-tree extend system-id
+!
+!
+!
+!
+vlan internal allocation policy ascending
+!
+ip tcp synwait-time 5
+ip ssh rsa keypair-name IOU1.cciethebeginning.wordpress.com
+ip ssh version 2
+! 
+!
+!
+!
+!
+!
+!
+!
+!
+interface Ethernet0/0
+ switchport access vlan 10
+ switchport mode access
+ duplex auto
+!
+interface Ethernet0/1
+ switchport access vlan 10
+ switchport mode access
+ duplex auto
+!
+interface Ethernet0/2
+ switchport access vlan 10
+ switchport mode access
+ duplex auto
+!
+interface Ethernet0/3
+ switchport access vlan 10
+ switchport mode access
+ duplex auto
+!
+interface Ethernet1/0
+ switchport access vlan 10
+ switchport mode access
+ duplex auto
+!
+interface Ethernet1/1
+ switchport access vlan 10
+ switchport mode access
+ duplex auto
+!
+interface Ethernet1/2
+ switchport access vlan 10
+ switchport mode access
+ duplex auto
+!
+interface Ethernet1/3
+ switchport access vlan 10
+ switchport mode access
+ duplex auto
+!
+interface Ethernet2/0
+ duplex auto
+!
+interface Ethernet2/1
+ switchport access vlan 10
+ switchport mode access
+ duplex auto
+!
+interface Ethernet2/2
+ switchport access vlan 10
+ switchport mode access
+ duplex auto
+!
+interface Ethernet2/3
+ switchport access vlan 10
+ switchport mode access
+ duplex auto
+!
+interface Ethernet3/0
+ duplex auto
+!
+interface Ethernet3/1
+ duplex auto
+!
+interface Ethernet3/2
+ duplex auto
+!
+interface Ethernet3/3
+ duplex auto
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+interface Vlan10
+ ip address 192.168.0.201 255.255.255.0
+!
+!
+ip http server
+ip http authentication local
+!
+!
+!
+!
+!
+!
+!
+control-plane
+!
+alias exec p6 ping
+alias exec se sh running-config | section
+alias exec sr sh running-config
+alias exec cc copy run start
+alias exec ii sh ip int brief
+alias exec sia sh ip alias
+alias exec iiu sh ip int brief | ex unassigned
+alias exec intcf sh run interface
+alias exec acl sh ip access-list
+alias exec acl6 sh ipv6 access-list
+alias exec croute clear ip route
+alias exec ii6 sh ipv6 int brief
+alias exec route6 sh ipv6 route
+alias exec route4 sh ip route | beg Gate
+alias exec trace6 trace ipv6
+alias exec bgp4 sh ip bgp
+alias exec bgpcf sh run | b router bgp
+alias exec bgpn sh ip bgp summ
+alias exec ospfcf sh run | b router ospf
+alias exec ospfn sh ip ospf nei
+alias exec cospf clear ip ospf pro
+alias exec eigrpcf sh run | b router eigrp
+alias exec eigrpn sh ip eigrp nei
+alias exec ripcf sh run | b router rip
+alias exec cpu show proc cpu | exclu 0.00%__0.00%__0.00%
+alias exec maincpu | include ^CPU|IP Input
+alias exec mem show proc memory
+!
+line con 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+line aux 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+line vty 0 4
+ exec-timeout 0 0
+ privilege level 15
+ transport input telnet ssh
+!
+end
+
+IOU1#

@@ -1,0 +1,16 @@
+sh ip cef
+Prefix               Next Hop             Interface
+0.0.0.0/0            no route
+0.0.0.0/8            drop
+0.0.0.0/32           receive              
+127.0.0.0/8          drop
+192.168.0.0/24       attached             Vlan10
+192.168.0.0/32       receive              Vlan10
+192.168.0.121/32     attached             Vlan10
+192.168.0.201/32     receive              Vlan10
+192.168.0.255/32     receive              Vlan10
+224.0.0.0/4          drop
+224.0.0.0/24         receive              
+240.0.0.0/4          drop
+255.255.255.255/32   receive              
+IOU1#

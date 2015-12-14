@@ -1,0 +1,6 @@
+sh ip nhrp nhs
+Legend:	E=Expecting replies, R=Responding, W=Waiting
+Tunnel0:
+172.16.40.4  RE priority = 0 cluster = 0
+
+IOU5#

@@ -1,0 +1,17 @@
+sh stacks
+Minimum process stacks:
+ Free/Size   Name
+11544/12000  CDP BLOB
+23384/24000  MRIB IPv6 Init Process
+23384/24000  MRIB IPv4 Init Process
+11368/12000  SSH Event handler
+20292/24000  Init
+11404/12000  SASL MAIN
+15524/16000  cdp init process
+11300/12000  RADIUS INITCONFIG
+ 5544/6000   Rom Random Update Process
+17576/24000  SSH Process
+
+Interrupt level stacks:
+Level    Called Unused/Size  Name
+IOU1#

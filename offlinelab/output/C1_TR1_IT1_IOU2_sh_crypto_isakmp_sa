@@ -1,0 +1,8 @@
+sh crypto isakmp sa
+IPv4 Crypto ISAKMP SA
+dst             src             state          conn-id status
+192.168.14.4    192.168.12.2    QM_IDLE           1006 ACTIVE
+
+IPv6 Crypto ISAKMP SA
+
+IOU2#

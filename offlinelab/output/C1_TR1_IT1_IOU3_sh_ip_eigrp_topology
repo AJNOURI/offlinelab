@@ -1,0 +1,17 @@
+sh ip eigrp topology
+EIGRP-IPv4 Topology Table for AS(666)/ID(3.3.3.3)
+Codes: P - Passive, A - Active, U - Update, Q - Query, R - Reply,
+       r - reply Status, s - sia Status 
+
+P 172.16.0.0/12, 1 successors, FD is 26880000
+        via Connected, Tunnel0
+P 50.0.0.0/24, 1 successors, FD is 28185600
+       172.16.50.5 via 172.16.40.4 (28185600/26905600), Tunnel0
+P 30.0.0.0/24, 1 successors, FD is 281600
+        via Connected, Ethernet0/1
+P 40.0.0.0/24, 1 successors, FD is 26905600
+        via 172.16.40.4 (26905600/281600), Tunnel0
+P 20.0.0.0/24, 1 successors, FD is 28185600
+       172.16.20.2 via 172.16.40.4 (28185600/26905600), Tunnel0
+
+IOU3#
