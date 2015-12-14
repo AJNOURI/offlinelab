@@ -1,8 +1,0 @@
-sh adjacency
-Protocol Interface                 Address
-IP       Ethernet0/0               192.168.14.4(7)
-IP       Ethernet0/1               192.168.15.5(7)
-IP       Ethernet0/3               192.168.13.3(7)
-IP       Ethernet1/0               192.168.12.2(7)
-IP       Ethernet3/3               192.168.0.121(7)
-internet#

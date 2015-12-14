@@ -1,4 +1,0 @@
-sh ip nhrp multicast
-  I/F     NBMA address  
-Tunnel0    192.168.14.4    Flags: static
-IOU5#

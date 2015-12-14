@@ -1,9 +1,0 @@
-sh dmvpn static
-Legend: Attrb --> S - Static, D - Dynamic, I - Incomplete
-	N - NATed, L - Local, X - No Socket
-	# Ent --> Number of NHRP entries with same NBMA peer
-	NHS Status: E --> Expecting Replies, R --> Responding, W --> Waiting
-	UpDn Time --> Up or Down Time for a Tunnel
-==========================================================================
-
-IOU4#

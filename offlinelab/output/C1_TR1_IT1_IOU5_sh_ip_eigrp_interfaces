@@ -1,7 +1,0 @@
-sh ip eigrp interfaces
-EIGRP-IPv4 Interfaces for AS(666)
-                              Xmit Queue   PeerQ        Mean   Pacing Time   Multicast    Pending
-Interface              Peers  Un/Reliable  Un/Reliable  SRTT   Un/Reliable   Flow Timer   Routes
-Tu0                      1        0/0       0/0          58       6/233        264           0
-Et0/1                    0        0/0       0/0           0       0/0            0           0
-IOU5#

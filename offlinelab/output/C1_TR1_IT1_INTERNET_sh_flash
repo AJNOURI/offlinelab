@@ -1,5 +1,0 @@
-sh flash
-              ^
-% Invalid input detected at '^' marker.
-
-internet#
