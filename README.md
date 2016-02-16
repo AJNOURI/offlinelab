@@ -73,11 +73,31 @@ Example of test case configuration file for a Cisco device: case1.yaml
       - interface e0/0
       - sh
 
-An example of the resulting xml file:
-![mycombos.xml](http://hpnouri.free.fr/ospfalle2/mycombos.xml)
 
-Here is a link to the final outcome: ![OSPF topology offline lab](http://hpnouri.free.fr/ospfalle2/offlinelabv1.swf)
+An example od deployment:
+
+./offlinelab.py 
+INFO:__main__: **** Test run 1 started ****  
+INFO:__main__: **** Case 1 collecting device states ****  
+INFO:paramiko.transport:Connected (version 2.0, client Cisco-1.25)  
+INFO:paramiko.transport:Authentication (password) successful!  
+INFO:basessh.cisco:paraSsh: sh run  DONE Output File ==> ./output/C1_TR1_IT1_Internet_sh_run  
+INFO:paramiko.transport:Connected (version 2.0, client Cisco-1.25)  
+INFO:paramiko.transport:Authentication (password) successful!  
+...  
+INFO:basessh.cisco:paraSsh: sh run  DONE Output File ==> ./output/C1_TR1_IT1_IOU44_sh_run  
+INFO:__main__: **** Test run 1 COMPLETED SUCCESSFULLY ****  
+INFO:__main__: **** Case 1 collecting device states COMPLETED SUCCESSFULLY ****  
+INFO:__main__:XML report built successfully  `
+
+
+And the resulting xml file:
+http://hpnouri.free.fr/ospfalle2/mycombos.xml
+
+Here is a link to the final outcome: OSPF topology offline lab
+http://hpnouri.free.fr/ospfalle2/offlinelabv1.swf
 
 ![screenshot](http://hpnouri.free.fr/Selection_360.jpg)
+
 
 
