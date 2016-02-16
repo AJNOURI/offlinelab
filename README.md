@@ -74,30 +74,23 @@ Example of test case configuration file for a Cisco device: case1.yaml
       - sh
 
 
-An example od deployment:
+An example of deployment:
 
-./offlinelab.py 
-INFO:__main__: **** Test run 1 started ****  
-INFO:__main__: **** Case 1 collecting device states ****  
-INFO:paramiko.transport:Connected (version 2.0, client Cisco-1.25)  
-INFO:paramiko.transport:Authentication (password) successful!  
-INFO:basessh.cisco:paraSsh: sh run  DONE Output File ==> ./output/C1_TR1_IT1_Internet_sh_run  
-INFO:paramiko.transport:Connected (version 2.0, client Cisco-1.25)  
-INFO:paramiko.transport:Authentication (password) successful!  
-...  
-INFO:basessh.cisco:paraSsh: sh run  DONE Output File ==> ./output/C1_TR1_IT1_IOU44_sh_run  
-INFO:__main__: **** Test run 1 COMPLETED SUCCESSFULLY ****  
-INFO:__main__: **** Case 1 collecting device states COMPLETED SUCCESSFULLY ****  
-INFO:__main__:XML report built successfully  `
+python offlinelab.py
 
+    INFO:main: **** Test run 1 started ****
+    INFO:main: **** Case 1 collecting device states ****
+    INFO:paramiko.transport:Connected (version 2.0, client Cisco-1.25)
+    INFO:paramiko.transport:Authentication (password) successful!
+    INFO:basessh.cisco:paraSsh: sh run DONE Output File ==> ./output/C1_TR1_IT1_Internet_sh_run
+    INFO:paramiko.transport:Connected (version 2.0, client Cisco-1.25)
+    INFO:paramiko.transport:Authentication (password) successful!
+    ...
+    INFO:basessh.cisco:paraSsh: sh run DONE Output File ==> ./output/C1_TR1_IT1_IOU44_sh_run
+    INFO:main: **** Test run 1 COMPLETED SUCCESSFULLY ****
+    INFO:main: **** Case 1 collecting device states COMPLETED SUCCESSFULLY ****
+    INFO:main:XML report built successfully
 
-And the resulting xml file:
-http://hpnouri.free.fr/ospfalle2/mycombos.xml
+And the resulting xml file: http://hpnouri.free.fr/ospfalle2/mycombos.xml
 
-Here is a link to the final outcome: OSPF topology offline lab
-http://hpnouri.free.fr/ospfalle2/offlinelabv1.swf
-
-![screenshot](http://hpnouri.free.fr/Selection_360.jpg)
-
-
-
+Here is a link to the final outcome: OSPF topology offline lab http://hpnouri.free.fr/ospfalle2/offlinelabv1.swf
