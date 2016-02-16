@@ -94,3 +94,5 @@ python offlinelab.py
 And the resulting xml file: http://hpnouri.free.fr/ospfalle2/mycombos.xml
 
 Here is a link to the final outcome: OSPF topology offline lab http://hpnouri.free.fr/ospfalle2/offlinelabv1.swf
+
+![screenshot](http://hpnouri.free.fr/Selection_360.jpg)
