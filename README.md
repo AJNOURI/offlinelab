@@ -3,11 +3,13 @@
 
 Report the state of a network topology.
 
- - Reads commands from test case yaml files and executes them remotely on the devices, this is repeated for each test run. Defining testruns is useful if the state of your network behavior evolves during time.
- - Reads commands (status and parameters) from device yaml files, execute them remotely, collect the result and report testcases>testruns>devices>commands to an XML an xml file.
+ - A test case defines a particular configuration of the network (for each device: credentias + configuration commands) for which you want to collect the network state.    
+ - The program reads commands from test case yaml files and executes them remotely on the devices to set a particular situation, and then for each device (yaml file with the name of the device) it reads the commands that will collect inf.
+ - If your network changes its state overtime with the same configurations, then you need to recollect inf. after defined periods of time.
+ - For each command for each device, the results are saved into a file and an XML file is built with all inf. about testcases, testruns and result file names.
  - The xml file is read by a flash application to show the offline status of the topology under each of the test run of every test case.
 
-For now it supports Cisco IOS/IOU and *nix systems, more to come.
+For now it supports Cisco IOS/IOU/IOSv and *nix systems, more to come.
 
 Example of Cisco device command file: IOU-cmd.yaml
 
